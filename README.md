@@ -25,6 +25,8 @@
 Example of the interface
 ![capture](https://user-images.githubusercontent.com/32285706/32790344-c5b37cb2-c990-11e7-8f9d-547b833964f9.JPG)
 
+Example of gameplay
+![capture jpg 1](https://user-images.githubusercontent.com/32285706/32793857-b84f7932-c999-11e7-8fd7-c94fe62fcffd.JPG)
 
 
 
