@@ -3,7 +3,7 @@
 ## Team members
 - Vichaphol Thamsuthikul	6010545897
 
-- Chawanant Kerdchuen	6010546656
+- Chawanant Kerdchuen	    6010546656
 
 ## Brief description of application
 - A game of answers and questions where players can earn money.
@@ -21,6 +21,7 @@
 - Reading files to read the questions’ file
 
 ## Vision or mock-up of the application
+
 Example of the interface
 
 
