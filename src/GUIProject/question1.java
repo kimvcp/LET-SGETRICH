@@ -37,17 +37,13 @@ public class question1 extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         Nextbutton = new javax.swing.JButton();
         Helpbutton = new javax.swing.JButton();
-        m1 = new javax.swing.JTextField();
-        m2 = new javax.swing.JTextField();
-        m3 = new javax.swing.JTextField();
-        m4 = new javax.swing.JTextField();
-        m5 = new javax.swing.JTextField();
         Question = new javax.swing.JTextField();
         ans2 = new javax.swing.JTextField();
         ans4 = new javax.swing.JTextField();
         ans3 = new javax.swing.JTextField();
         ans1 = new javax.swing.JTextField();
         GIFBackground = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -57,7 +53,6 @@ public class question1 extends javax.swing.JFrame {
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Nextbutton.setBackground(new java.awt.Color(0, 0, 0));
-        Nextbutton.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\240_F_32348946_6LyWrw8sTY2hwuIRC85khoCh4nva4ir1.png")); // NOI18N
         Nextbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         Nextbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +62,6 @@ public class question1 extends javax.swing.JFrame {
         Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 510, 170, 80));
 
         Helpbutton.setBackground(new java.awt.Color(0, 0, 0));
-        Helpbutton.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\123240_F_23491219_chLIEgNXQ14097Th8BW1iLDdX9nfrFAJ.jpg")); // NOI18N
         Helpbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         Helpbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,31 +69,6 @@ public class question1 extends javax.swing.JFrame {
             }
         });
         Background.add(Helpbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 170, 80));
-
-        m1.setText("jTextField1");
-        m1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                m1ActionPerformed(evt);
-            }
-        });
-        Background.add(m1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 480, 230, 40));
-
-        m2.setText("jTextField1");
-        Background.add(m2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 230, 40));
-
-        m3.setText("jTextField1");
-        Background.add(m3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 230, 40));
-
-        m4.setText("jTextField1");
-        Background.add(m4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 230, 40));
-
-        m5.setText("jTextField1");
-        m5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                m5ActionPerformed(evt);
-            }
-        });
-        Background.add(m5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 230, 40));
 
         Question.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
         Question.setText("Questions");
@@ -160,9 +129,13 @@ public class question1 extends javax.swing.JFrame {
             }
         });
         Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 170, 50));
-
-        GIFBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\question-marks-background-cute-13.gif")); // NOI18N
         Background.add(GIFBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/money1.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
+        jLabel1.getAccessibleContext().setAccessibleName("");
+        jLabel1.getAccessibleContext().setAccessibleDescription("");
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
@@ -173,10 +146,6 @@ public class question1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ans1ActionPerformed
 
-    private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QuestionActionPerformed
-
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
         if(ans1.getText()==answer){
             m1.setText("win");
@@ -185,24 +154,20 @@ public class question1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ans1MouseClicked
 
-    private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-if(ans2.getText()==answer){
-            m1.setText("win");
-        }else{
-            m1.setText("Lose");
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_ans2MouseClicked
-
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-if(ans3.getText()==answer){
+        if(ans3.getText()==answer){
             m1.setText("win");
         }else{
             m1.setText("Lose");
         }        // TODO add your handling code here:
     }//GEN-LAST:event_ans3MouseClicked
 
+    private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ans4ActionPerformed
+
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
-if(ans4.getText()==answer){
+        if(ans4.getText()==answer){
             m1.setText("win");
         }else{
             m1.setText("Lose");
@@ -213,25 +178,25 @@ if(ans4.getText()==answer){
         // TODO add your handling code here:
     }//GEN-LAST:event_ans2ActionPerformed
 
-    private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ans4ActionPerformed
+    private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
+        if(ans2.getText()==answer){
+            m1.setText("win");
+        }else{
+            m1.setText("Lose");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_ans2MouseClicked
 
-    private void m1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m1ActionPerformed
+    private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_m1ActionPerformed
-
-    private void m5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_m5ActionPerformed
-
-    private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NextbuttonActionPerformed
+    }//GEN-LAST:event_QuestionActionPerformed
 
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HelpbuttonActionPerformed
+
+    private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NextbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,10 +243,6 @@ if(ans4.getText()==answer){
     private javax.swing.JTextField ans2;
     private javax.swing.JTextField ans3;
     private javax.swing.JTextField ans4;
-    private javax.swing.JTextField m1;
-    private javax.swing.JTextField m2;
-    private javax.swing.JTextField m3;
-    private javax.swing.JTextField m4;
-    private javax.swing.JTextField m5;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
