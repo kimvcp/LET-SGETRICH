@@ -9,6 +9,7 @@ package GUIProject;
  *
  * @author HP
  */
+import static java.awt.Color.WHITE;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -27,24 +28,26 @@ public class question1 extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     int count=0;
     String[] imagenames={"starter.png"};
-    int money0=0;
-    String[]immoney0={"money1.jpg"};
+    int money=0;
+    String[] immoney={"starter.png"};
     int money1=0;
-    String[]immoney1={"money2.png"};
+    String[]immoney1={"money1.jpg"};
     int money2=0;
-    String[]immoney2={"money3.png"};
+    String[]immoney2={"money2.png"};
     int money3=0;
-    String[]immoney3={"money4.png"};
+    String[]immoney3={"money3.png"};
     int money4=0;
-    String[]immoney4={"money5.png"};
+    String[]immoney4={"money4.png"};
     int money5=0;
-    String[]immoney5={"money6.png"};
-    int money6=0;
-    String[]immoney6={"money7.png"};
+    String[]immoney6={"money5.png"};
     int money7=0;
-    String[]immoney7={"money8.png"};
-        int money8=0;
-    String[]immoney8={"money9.png"};
+    String[]immoney7={"money6.png"};
+    int money8=0;
+    String[]immoney8={"money7.png"};
+    int money9=0;
+    String[]immoney9={"money8.png"};
+    int money10=0;
+    String[]immoney10={"money9.png"};
     
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -60,6 +63,7 @@ public class question1 extends javax.swing.JFrame {
         ans4 = new javax.swing.JTextField();
         ans3 = new javax.swing.JTextField();
         Price = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         GIFBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,7 +87,7 @@ public class question1 extends javax.swing.JFrame {
                 NextbuttonActionPerformed(evt);
             }
         });
-        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 170, 80));
+        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 170, 80));
 
         Helpbutton.setBackground(new java.awt.Color(0, 0, 0));
         Helpbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/123240_F_23491219_chLIEgNXQ14097Th8BW1iLDdX9nfrFAJ.jpg"))); // NOI18N
@@ -98,9 +102,9 @@ public class question1 extends javax.swing.JFrame {
                 HelpbuttonActionPerformed(evt);
             }
         });
-        Background.add(Helpbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 170, 80));
+        Background.add(Helpbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 170, 80));
 
-        BackButton.setFont(new java.awt.Font("Perpetua Titling MT", 0, 14)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
         BackButton.setText("BACK");
         BackButton.setToolTipText("");
         BackButton.addActionListener(new java.awt.event.ActionListener() {
@@ -108,20 +112,22 @@ public class question1 extends javax.swing.JFrame {
                 BackButtonActionPerformed(evt);
             }
         });
-        Background.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 40));
+        Background.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 60));
 
         Question.setEditable(false);
         Question.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        Question.setForeground(new java.awt.Color(0, 0, 255));
         Question.setText("                                      Questions");
         Question.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QuestionActionPerformed(evt);
             }
         });
-        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 480, 80));
+        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 480, 80));
 
         ans1.setEditable(false);
         ans1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans1.setForeground(new java.awt.Color(0, 153, 0));
         ans1.setText("                     ans1");
         ans1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -133,10 +139,11 @@ public class question1 extends javax.swing.JFrame {
                 ans1ActionPerformed(evt);
             }
         });
-        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 210, 50));
+        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 210, 50));
 
         ans2.setEditable(false);
         ans2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans2.setForeground(new java.awt.Color(255, 153, 0));
         ans2.setText("                     ans2");
         ans2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -148,10 +155,11 @@ public class question1 extends javax.swing.JFrame {
                 ans2ActionPerformed(evt);
             }
         });
-        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 210, 50));
+        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 210, 50));
 
         ans4.setEditable(false);
         ans4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans4.setForeground(new java.awt.Color(0, 204, 204));
         ans4.setText("                     ans4");
         ans4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -163,10 +171,11 @@ public class question1 extends javax.swing.JFrame {
                 ans4ActionPerformed(evt);
             }
         });
-        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 210, 50));
+        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 210, 50));
 
         ans3.setEditable(false);
         ans3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans3.setForeground(new java.awt.Color(153, 0, 153));
         ans3.setText("                     ans3");
         ans3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -178,15 +187,20 @@ public class question1 extends javax.swing.JFrame {
                 ans3ActionPerformed(evt);
             }
         });
-        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 210, 50));
+        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 210, 50));
 
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/starter.png"))); // NOI18N
         Price.setText("jLabel1");
-        Background.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 260, 390));
+        Price.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 255), 5));
+        Background.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 260, 390));
         Price.getAccessibleContext().setAccessibleName("");
         Price.getAccessibleContext().setAccessibleDescription("");
 
-        GIFBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/2question-marks-background-cute-13.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/sandtime.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, 160, 180));
+
+        GIFBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/f43d23e7d0d90607f2e3d473fb15a261.gif"))); // NOI18N
         Background.add(GIFBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -199,11 +213,41 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
-       
+       if(callquestion==1 && ans1.isFocusable()){
+        ans1.setOpaque(true);
+        ans1.setForeground(Color.BLACK);
+        ans1.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney1[i]));
+                
+           }
+           if(money1<0)money1=1;
+           if(money1>=0 && money1< immoney1.length){
+               Price.setIcon(imagelist1[money1]);
+          money1++;
+           }       
+    } 
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-    
+     if(callquestion==2 && ans3.isFocusable()){
+        ans3.setOpaque(true);
+        ans3.setForeground(Color.BLACK);
+        ans3.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney2[i]));
+                
+           }
+           if(money2<0)money2=1;
+           if(money2>=0 && money2< immoney2.length){
+               Price.setIcon(imagelist1[money2]);
+          money2++;
+           }       
+    }                    
     }//GEN-LAST:event_ans3MouseClicked
 
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
@@ -219,7 +263,22 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2ActionPerformed
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-     
+     if(callquestion==3 && ans2.isFocusable()){
+        ans2.setOpaque(true);
+        ans2.setForeground(Color.BLACK);
+        ans2.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney3[i]));
+                
+           }
+           if(money3<0)money3=1;
+           if(money3>=0 && money3< immoney3.length){
+               Price.setIcon(imagelist1[money3]);
+          money3++;
+           }       
+    }                 
     }//GEN-LAST:event_ans2MouseClicked
 
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
@@ -233,7 +292,11 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-     callquestion=callquestion+1;
+    callquestion=callquestion+1;
+        ans1.setBackground(WHITE);
+        ans2.setBackground(WHITE);
+        ans3.setBackground(WHITE);
+        ans4.setBackground(WHITE);
  if(callquestion==1){
      Question.setText("What are two types of Network?");
      ans1.setText("A). WAN and LAN ");
@@ -273,7 +336,7 @@ if(callquestion==5){
 
     @SuppressWarnings("empty-statement")
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-       Question.setText("");
+       Question.setText("Are You Ready?");
        ans1.setText("");
        ans2.setText("");
        ans3.setText("");
@@ -342,5 +405,6 @@ if(callquestion==5){
     private javax.swing.JTextField ans2;
     private javax.swing.JTextField ans3;
     private javax.swing.JTextField ans4;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -69,7 +69,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="300" y="510" width="170" height="80"/>
+              <AbsoluteConstraints x="310" y="470" width="170" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -95,14 +95,14 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="50" y="510" width="170" height="80"/>
+              <AbsoluteConstraints x="40" y="470" width="170" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="BackButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Perpetua Titling MT" size="14" style="0"/>
+              <Font name="Tw Cen MT Condensed" size="36" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="BACK"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -112,7 +112,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="10" width="80" height="40"/>
+              <AbsoluteConstraints x="10" y="10" width="120" height="60"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -122,6 +122,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="18" style="0"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="                                      Questions"/>
           </Properties>
           <Events>
@@ -129,7 +132,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="190" width="480" height="80"/>
+              <AbsoluteConstraints x="20" y="140" width="480" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -139,6 +142,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="0"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="99" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="                     ans1"/>
           </Properties>
           <Events>
@@ -147,7 +153,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="320" width="210" height="50"/>
+              <AbsoluteConstraints x="20" y="280" width="210" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -157,6 +163,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="0"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="99" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="                     ans2"/>
           </Properties>
           <Events>
@@ -165,7 +174,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="280" y="320" width="210" height="50"/>
+              <AbsoluteConstraints x="290" y="280" width="210" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -175,6 +184,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="0"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="                     ans4"/>
           </Properties>
           <Events>
@@ -183,7 +195,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="280" y="430" width="210" height="50"/>
+              <AbsoluteConstraints x="290" y="380" width="210" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -193,6 +205,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="0"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="0" red="99" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="                     ans3"/>
           </Properties>
           <Events>
@@ -201,7 +216,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="430" width="210" height="50"/>
+              <AbsoluteConstraints x="20" y="380" width="210" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -211,6 +226,13 @@
               <Image iconType="3" name="/GUIProject/image/starter.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder thickness="5">
+                  <Color PropertyName="color" blue="ff" green="ff" red="99" type="rgb"/>
+                </LineBorder>
+              </Border>
+            </Property>
           </Properties>
           <AccessibilityProperties>
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
@@ -218,14 +240,27 @@
           </AccessibilityProperties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="520" y="120" width="260" height="390"/>
+              <AbsoluteConstraints x="540" y="0" width="260" height="390"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/GUIProject/image/sandtime.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="jLabel1"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="610" y="410" width="160" height="180"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="GIFBackground">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/GUIProject/image/2question-marks-background-cute-13.gif"/>
+              <Image iconType="3" name="/GUIProject/image/f43d23e7d0d90607f2e3d473fb15a261.gif"/>
             </Property>
           </Properties>
           <Constraints>
