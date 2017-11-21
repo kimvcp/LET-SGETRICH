@@ -53,13 +53,14 @@ public class question1 extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         Nextbutton = new javax.swing.JButton();
         Helpbutton = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
         Question = new javax.swing.JTextField();
+        ans1 = new javax.swing.JTextField();
         ans2 = new javax.swing.JTextField();
         ans4 = new javax.swing.JTextField();
         ans3 = new javax.swing.JTextField();
-        ans1 = new javax.swing.JTextField();
+        Price = new javax.swing.JLabel();
         GIFBackground = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,15 +75,18 @@ public class question1 extends javax.swing.JFrame {
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Nextbutton.setBackground(new java.awt.Color(0, 0, 0));
+        Nextbutton.setFont(new java.awt.Font("Rockwell", 0, 10)); // NOI18N
+        Nextbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/240_F_32348946_6LyWrw8sTY2hwuIRC85khoCh4nva4ir1.png"))); // NOI18N
         Nextbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         Nextbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NextbuttonActionPerformed(evt);
             }
         });
-        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 510, 170, 80));
+        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 170, 80));
 
         Helpbutton.setBackground(new java.awt.Color(0, 0, 0));
+        Helpbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/123240_F_23491219_chLIEgNXQ14097Th8BW1iLDdX9nfrFAJ.jpg"))); // NOI18N
         Helpbutton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
         Helpbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -94,56 +98,31 @@ public class question1 extends javax.swing.JFrame {
                 HelpbuttonActionPerformed(evt);
             }
         });
-        Background.add(Helpbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 170, 80));
+        Background.add(Helpbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 170, 80));
 
-        Question.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
-        Question.setText("Questions");
+        BackButton.setFont(new java.awt.Font("Perpetua Titling MT", 0, 14)); // NOI18N
+        BackButton.setText("BACK");
+        BackButton.setToolTipText("");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
+        Background.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 40));
+
+        Question.setEditable(false);
+        Question.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        Question.setText("                                      Questions");
         Question.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QuestionActionPerformed(evt);
             }
         });
-        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 400, 130));
+        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 480, 80));
 
-        ans2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ans2.setText("ans2");
-        ans2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ans2MouseClicked(evt);
-            }
-        });
-        ans2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ans2ActionPerformed(evt);
-            }
-        });
-        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 170, 50));
-
-        ans4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ans4.setText("ans4");
-        ans4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ans4MouseClicked(evt);
-            }
-        });
-        ans4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ans4ActionPerformed(evt);
-            }
-        });
-        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 50));
-
-        ans3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ans3.setText("ans3");
-        ans3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ans3MouseClicked(evt);
-            }
-        });
-        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 170, 50));
-
-        ans1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ans1.setText("ans1");
+        ans1.setEditable(false);
+        ans1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans1.setText("                     ans1");
         ans1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ans1MouseClicked(evt);
@@ -154,14 +133,61 @@ public class question1 extends javax.swing.JFrame {
                 ans1ActionPerformed(evt);
             }
         });
-        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 170, 50));
-        Background.add(GIFBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 210, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/starter.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 260, -1));
-        jLabel1.getAccessibleContext().setAccessibleName("");
-        jLabel1.getAccessibleContext().setAccessibleDescription("");
+        ans2.setEditable(false);
+        ans2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans2.setText("                     ans2");
+        ans2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ans2MouseClicked(evt);
+            }
+        });
+        ans2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ans2ActionPerformed(evt);
+            }
+        });
+        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 210, 50));
+
+        ans4.setEditable(false);
+        ans4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans4.setText("                     ans4");
+        ans4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ans4MouseClicked(evt);
+            }
+        });
+        ans4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ans4ActionPerformed(evt);
+            }
+        });
+        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 210, 50));
+
+        ans3.setEditable(false);
+        ans3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        ans3.setText("                     ans3");
+        ans3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ans3MouseClicked(evt);
+            }
+        });
+        ans3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ans3ActionPerformed(evt);
+            }
+        });
+        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 210, 50));
+
+        Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/starter.png"))); // NOI18N
+        Price.setText("jLabel1");
+        Background.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 260, 390));
+        Price.getAccessibleContext().setAccessibleName("");
+        Price.getAccessibleContext().setAccessibleDescription("");
+
+        GIFBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/2question-marks-background-cute-13.gif"))); // NOI18N
+        Background.add(GIFBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
@@ -201,11 +227,48 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_QuestionActionPerformed
 
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
-        // TODO add your handling code here:
+       Help h = new Help();
+       h.setVisible(true);
+       this.setVisible(false);
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-        // TODO add your handling code here:
+     callquestion=callquestion+1;
+ if(callquestion==1){
+     Question.setText("What are two types of Network?");
+     ans1.setText("A). WAN and LAN ");
+     ans2.setText("B). CAN and TAN");
+     ans3.setText("C). WLAN and CAN");
+     ans4.setText("D). PAN and DAN");
+ }
+if(callquestion==2){
+     Question.setText("What is the brain of any computer system?");
+     ans1.setText("A). Memory");
+     ans2.setText("B). ALU");
+     ans3.setText("C). CPU");
+     ans4.setText("D). Control unit");
+ }
+if(callquestion==3){
+     Question.setText("Which team won EURO 2016?");
+     ans1.setText("A). Spain ");
+     ans2.setText("B). Portugal");
+     ans3.setText("C). France");
+     ans4.setText("D). Germany");
+ }
+if(callquestion==4){
+     Question.setText("Which country have the most World cup titles?");
+     ans1.setText("A). Argentina");
+     ans2.setText("B). Germany");
+     ans3.setText("C). Brazil");
+     ans4.setText("D). Spain");
+ }
+if(callquestion==5){
+     Question.setText("Which movie won the best picture award of Oscar 2017?");
+     ans1.setText("A). La La Land");
+     ans2.setText("B). Moonlight");
+     ans3.setText("C). Manchester by the Sea");
+     ans4.setText("D). Zootopia");
+ }
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")
@@ -219,43 +282,18 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void HelpbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpbuttonMouseClicked
- callquestion=callquestion+1;
- if(callquestion==1){
-     Question.setText("1)What are two types of Network?");
-     ans1.setText("WAN and LAN ");
-     ans2.setText("CAN and TAN");
-     ans3.setText("WLAN and CAN");
-     ans4.setText("PAN and DAN");
- }
-if(callquestion==2){
-     Question.setText("2)What is the brain of any computer system?");
-     ans1.setText("Memory");
-     ans2.setText("ALU");
-     ans3.setText("CPU");
-     ans4.setText("Control unit");
- }
-if(callquestion==3){
-     Question.setText("3)Which team won EURO 2016");
-     ans1.setText("Spain ");
-     ans2.setText("Portugal");
-     ans3.setText("France");
-     ans4.setText("Germany");
- }
-if(callquestion==4){
-     Question.setText("4)Which country have the most World cup titles?");
-     ans1.setText("Argentina");
-     ans2.setText("Germany");
-     ans3.setText("Brazil");
-     ans4.setText("Spain");
- }
-if(callquestion==5){
-     Question.setText("5)Which movie won the best picture award of Oscar 2017?");
-     ans1.setText("La La Land");
-     ans2.setText("Moonlight");
-     ans3.setText("Manchester by the Sea");
-     ans4.setText("Zootopia");
- }
+ 
     }//GEN-LAST:event_HelpbuttonMouseClicked
+
+    private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ans3ActionPerformed
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        background b = new background();
+        b.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,15 +331,16 @@ if(callquestion==5){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackButton;
     private javax.swing.JPanel Background;
     private javax.swing.JLabel GIFBackground;
     private javax.swing.JButton Helpbutton;
     private javax.swing.JButton Nextbutton;
+    private javax.swing.JLabel Price;
     private javax.swing.JTextField Question;
     private javax.swing.JTextField ans1;
     private javax.swing.JTextField ans2;
     private javax.swing.JTextField ans3;
     private javax.swing.JTextField ans4;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
