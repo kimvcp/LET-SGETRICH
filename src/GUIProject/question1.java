@@ -504,6 +504,7 @@ public class question1 extends javax.swing.JFrame {
         ans2.setBackground(WHITE);
         ans3.setBackground(WHITE);
         ans4.setBackground(WHITE);
+        
  if(callquestion==1){
      Question.setText("What are two types of Network?");
      ans1.setText("A). WAN and LAN ");
