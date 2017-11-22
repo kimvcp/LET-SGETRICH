@@ -3,9 +3,18 @@ What is the brain of any computer system
 Which team won EURO 2016?
 Which country have the most World cup titles?
 Which movie won the best picture award of Oscar 2017?
-What is the value of (2*3)+(4*5)?
 Which movie won the best original song award of Oscar 2017?
 Which of the following is not a type of constructor?
 What is the Capital of Thailand?
 What is the Capital of China?
-Count is a/an ____?
+Which is used to return the number of characters in the string?
+Which of the following animals sleep standing up?
+What company is the current owner of Java SE platform?
+Who is the owner of Facebook?
+What file extension is used for a Java source code?
+Which is the currency of Vietnam?
+Which one of these is  not news website?
+Which one is ASEAN member Countries?
+What is the name of the inventor of Java?
+Which of the following keywords are in C++ but not Java?
+What was the original name for Java?

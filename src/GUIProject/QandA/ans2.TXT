@@ -3,9 +3,18 @@ B). ALU
 B). Portugal
 B). Germany
 B). Zootopia
-B). 26
 B). Moonlight
 B). Friend constructor
 B). Samui
 B). Beiling
-B). function
+B). size
+B). Flamingos 
+B). Oracle Corporation
+B). Dustin Moskovitz
+B). .exe
+B). Dong
+B). CNN
+B). Brunei
+B). Bjarne Stroustrop
+B). virtual
+B). Lisp

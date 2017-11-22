@@ -3,9 +3,18 @@ C). CPU
 C). France
 C). Brazil
 C). Manchester by the Sea
-C). 25
 C). Manchester by the Sea
 C). Default constructor
 C). Bangkok
 C). Macau
-C). objects
+C). Both size & length
+C). Camels
+C). Java Software Foundation
+C). Peter Schiff
+C). .class
+C). Euro
+C). Siamsport
+C). Cyprus
+C). Jame Gosling 
+C). class
+C). Ada

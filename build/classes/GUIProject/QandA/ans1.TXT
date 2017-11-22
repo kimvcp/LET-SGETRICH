@@ -3,9 +3,18 @@ A). Memory
 A). Spain 
 A). Argentina
 A). La La Land
-A). 23
 A). La La Land
 A). Copy 
 A). Chiang-Rai
 A). Sarajevo
-A). Operator
+A). length
+A). Gorillas
+A). Microsoft
+A). Bill Gate
+A). .java
+A). Bath
+A). BBC
+A). Armenia
+A). Bill Gate
+A). float
+A). Oak

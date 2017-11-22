@@ -27,9 +27,10 @@ public class question1 extends javax.swing.JFrame {
     /**
      * Creates new form question1
      */  
-    boolean [] ard = new boolean[15];
+    boolean [] ard = new boolean[20];
     Random rd = new Random();
     static int count=0;
+    static int callquestion = 0;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -550,113 +551,25 @@ public class question1 extends javax.swing.JFrame {
     init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
     init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
     init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
-   
-    int callquestion = 0;
     
     while (true){
-    if(count >= 15)
+    if(count >= 20)
          break;
     
-    callquestion = rd.nextInt(15)+1;
+    callquestion = rd.nextInt(20)+1;
      if(!ard[callquestion-1]==false){
            ard[callquestion-1] = false;
            count++;
            System.out.println(count);
            break;
       }
-     
     }
- if(callquestion == 1){
-     Question.setText(Questions.get(0));
-     ans1.setText(Ans1.get(0));
-     ans2.setText(Ans2.get(0));
-     ans3.setText(Ans3.get(0));
-     ans4.setText(Ans4.get(0));
- }
-if(callquestion==2){
-     Question.setText(Questions.get(1));
-     ans1.setText(Ans1.get(1));
-     ans2.setText(Ans2.get(1));
-     ans3.setText(Ans3.get(1));
-     ans4.setText(Ans4.get(1));
- }
-if(callquestion==3){
-     Question.setText(Questions.get(2));
-     ans1.setText(Ans1.get(2));
-     ans2.setText(Ans2.get(2));
-     ans3.setText(Ans3.get(2));
-     ans4.setText(Ans4.get(2));
- }
-if(callquestion==4){
-     Question.setText(Questions.get(3));
-     ans1.setText(Ans1.get(3));
-     ans2.setText(Ans2.get(3));
-     ans3.setText(Ans3.get(3));
-     ans4.setText(Ans4.get(3));
- }
-if(callquestion==5){
-     Question.setText(Questions.get(4));
-     ans1.setText(Ans1.get(4));
-     ans2.setText(Ans2.get(4));
-     ans3.setText(Ans3.get(4));
-     ans4.setText(Ans4.get(4));
- }
-if(callquestion==6){
-     Question.setText(Questions.get(5));
-     ans1.setText(Ans1.get(5));
-     ans2.setText(Ans2.get(5));
-     ans3.setText(Ans3.get(5));
-     ans4.setText(Ans4.get(5));
- }
-if(callquestion==7){
-     Question.setText(Questions.get(6));
-     ans1.setText(Ans1.get(6));
-     ans2.setText(Ans2.get(6));
-     ans3.setText(Ans3.get(6));
-     ans4.setText(Ans4.get(6));
- }
-if(callquestion==8){
-     Question.setText(Questions.get(7));
-     ans1.setText(Ans1.get(7));
-     ans2.setText(Ans2.get(7));
-     ans3.setText(Ans3.get(7));
-     ans4.setText(Ans4.get(7));
- 
- }
-if(callquestion==9){
-     Question.setText(Questions.get(8));
-     ans1.setText(Ans1.get(8));
-     ans2.setText(Ans2.get(8));
-     ans3.setText(Ans3.get(8));
-     ans4.setText(Ans4.get(8));
- }if(callquestion==10){
-     Question.setText(Questions.get(9));
-     ans1.setText(Ans1.get(9));
-     ans2.setText(Ans2.get(9));
-     ans3.setText(Ans3.get(9));
-     ans4.setText(Ans4.get(9));
- }
-if(callquestion==11){
-     Question.setText(Questions.get(10));
-     ans1.setText(Ans1.get(10));
-     ans2.setText(Ans2.get(10));
-     ans3.setText(Ans3.get(10));
-     ans4.setText(Ans4.get(10));
- }
-if(callquestion==12){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==13){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
+    Question.setText(Questions.get(callquestion-1));
+     ans1.setText(Ans1.get(callquestion-1));
+     ans2.setText(Ans2.get(callquestion-1));
+     ans3.setText(Ans3.get(callquestion-1));
+     ans4.setText(Ans4.get(callquestion-1));
+     
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")

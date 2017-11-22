@@ -3,9 +3,18 @@ D). Control unit
 D). Germany
 D). Spain
 D). Moonlight
-D). 20
 D). Suicide Squad
 D). Parameterized constructor
 D). Ladda Land
 D). Beijing
-D). macro
+D). none of these
+D). Ravens
+D). Sun Microsystems
+D). Mark Zuckerberge
+D). .obj
+D). Rupee
+D). TrueMove H 
+D). Dominica
+D). Dennis Ritchie
+D). goto
+D). C++
