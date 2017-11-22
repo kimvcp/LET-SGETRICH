@@ -252,12 +252,41 @@ public class question1 extends javax.swing.JFrame {
         ans1.setOpaque(true);
         ans1.setBackground(Color.red);
         }  
-           
+        if(callquestion==7 && ans1.isFocusable()){
+        ans1.setOpaque(true);
+        ans1.setBackground(Color.green);
         
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney7[i]));
+                
+           }
+           if(money7<0)money7=1;
+           if(money7>=0 && money7< immoney7.length){
+               Price.setIcon(imagelist1[money7]);
+          money7++;
+           }}   
+         
+        if(callquestion==8){
+        ans1.setOpaque(true);
+        ans1.setBackground(Color.red);}
+         if(callquestion==9){
+        ans1.setOpaque(true);
+        ans1.setBackground(Color.red);
+    
+    }                                 
+           
+           
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
 
+        if(callquestion==1 && ans3.isFocusable()){
+        ans3.setOpaque(true);
+        ans3.setBackground(Color.red);
+        WAFQ w = new WAFQ();
+        w.setVisible(true);
+         }
         if(callquestion==2 && ans3.isFocusable()){
         ans3.setOpaque(true);
         ans3.setBackground(Color.green);
@@ -273,6 +302,10 @@ public class question1 extends javax.swing.JFrame {
           money2++;
            }
          }
+        if(callquestion==3){
+        ans3.setOpaque(true);
+        ans3.setBackground(Color.red);
+        }
          if(callquestion==4 && ans3.isFocusable()){
         ans3.setOpaque(true);
         ans3.setBackground(Color.green);
@@ -287,16 +320,8 @@ public class question1 extends javax.swing.JFrame {
           money4++;
            }       
         }
-         if(callquestion==1 && ans3.isFocusable()){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        WAFQ w = new WAFQ();
-        w.setVisible(true);
-         }
-        if(callquestion==3){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        }
+         
+        
         if(callquestion==5){
         ans3.setOpaque(true);
         ans3.setBackground(Color.red);
@@ -305,6 +330,29 @@ public class question1 extends javax.swing.JFrame {
         ans3.setOpaque(true);
         ans3.setBackground(Color.red);
         }
+       if(callquestion==7){
+        ans3.setOpaque(true);
+        ans3.setBackground(Color.red);
+      }
+       if(callquestion==8){
+        ans3.setOpaque(true);
+        ans3.setBackground(Color.red);
+      }
+       
+       if(callquestion==9 && ans3.isFocusable()){
+        ans3.setOpaque(true);
+        ans3.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney9[i]));
+                
+           }
+           if(money9<0)money9=1;
+           if(money9>=0 && money9< immoney9.length){
+               Price.setIcon(imagelist1[money9]);
+          money9++;
+           }       }
 
     
     }//GEN-LAST:event_ans3MouseClicked
@@ -315,21 +363,6 @@ public class question1 extends javax.swing.JFrame {
 
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
 
-        if(callquestion==5 && ans4.isFocusable()){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney5[i]));    
-           }
-           if(money5<0)money5=1;
-           if(money5>=0 && money5< immoney5.length){
-               Price.setIcon(imagelist1[money5]);
-          money5++;
-           }       
-         
-         }
         if(callquestion==1 && ans4.isFocusable()){
         ans4.setOpaque(true);
         ans4.setBackground(Color.red);
@@ -348,10 +381,35 @@ public class question1 extends javax.swing.JFrame {
         ans4.setOpaque(true);
         ans4.setBackground(Color.red);
          }
+        if(callquestion==5 && ans4.isFocusable()){
+        ans4.setOpaque(true);
+        ans4.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney5[i]));    
+           }
+           if(money5<0)money5=1;
+           if(money5>=0 && money5< immoney5.length){
+               Price.setIcon(imagelist1[money5]);
+          money5++;
+           }       
+         
+         }
+        
         if(callquestion==6){
         ans4.setOpaque(true);
-        ans4.setBackground(Color.red);
-         }
+        ans4.setBackground(Color.red);}
+        if(callquestion==7){
+        ans4.setOpaque(true);
+        ans4.setBackground(Color.red);}
+        if(callquestion==8){
+        ans4.setOpaque(true);
+        ans4.setBackground(Color.red);}
+        if(callquestion==9){
+        ans4.setOpaque(true);
+        ans4.setBackground(Color.red);}
+         
          
     }//GEN-LAST:event_ans4MouseClicked
 
@@ -361,6 +419,15 @@ public class question1 extends javax.swing.JFrame {
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
          
+        if(callquestion==1 && ans2.isFocusable()){
+        ans2.setOpaque(true);
+        ans2.setBackground(Color.red);
+        WAFQ w = new WAFQ();
+        w.setVisible(true);
+        }
+        if(callquestion==2){
+        ans2.setOpaque(true);
+        ans2.setBackground(Color.red);}
         if(callquestion==3 && ans2.isFocusable()){
         ans2.setOpaque(true);
         ans2.setBackground(Color.green);
@@ -376,6 +443,12 @@ public class question1 extends javax.swing.JFrame {
           money3++;
            }       
          }
+        if(callquestion==4){
+        ans2.setOpaque(true);
+        ans2.setBackground(Color.red);}
+        if(callquestion==5){
+        ans2.setOpaque(true);
+        ans2.setBackground(Color.red);}
         if(callquestion==6 && ans2.isFocusable()){
         ans2.setOpaque(true);
         ans2.setBackground(Color.green);
@@ -384,25 +457,32 @@ public class question1 extends javax.swing.JFrame {
          imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney6[i]));
                 
            }
-           if(money6<0)money3=1;
+           if(money6<0)money6=1;
            if(money6>=0 && money6< immoney6.length){
             Price.setIcon(imagelist1[money6]);
           money6++;
            }       
          }
-        if(callquestion==1 && ans2.isFocusable()){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);
-        WAFQ w = new WAFQ();
-        w.setVisible(true);
-        }
-        if(callquestion==2){
+        if(callquestion==7){
         ans2.setOpaque(true);
         ans2.setBackground(Color.red);}
-        if(callquestion==4){
+        
+       if(callquestion==8 && ans2.isFocusable()){
         ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        if(callquestion==5){
+        ans2.setBackground(Color.green);
+        
+        ImageIcon[] imagelist1=new ImageIcon[1];
+           for (int i = 0; i < imagelist1.length; i++) {
+         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney8[i]));
+                
+           }
+           if(money8<0)money8=1;
+           if(money8>=0 && money8< immoney8.length){
+               Price.setIcon(imagelist1[money8]);
+          money8++;
+           }   }
+      
+        if(callquestion==9){
         ans2.setOpaque(true);
         ans2.setBackground(Color.red);}
         
@@ -455,9 +535,9 @@ if(callquestion==4){
 if(callquestion==5){
      Question.setText("Which movie won the best picture award of Oscar 2017?");
      ans1.setText("A). La La Land");
-     ans2.setText("B). Moonlight");
+     ans2.setText("B). Zootopia");
      ans3.setText("C). Manchester by the Sea");
-     ans4.setText("D). Zootopia");
+     ans4.setText("D). Moonlight");
  }
 if(callquestion==6){
      Question.setText("What is the value of (2*3)+(4*5)?");
@@ -467,46 +547,32 @@ if(callquestion==6){
      ans4.setText("D). 20");
  }
 if(callquestion==7){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
+     Question.setText("Which movie won the best original song award of Oscar 2017?");
+     ans1.setText("A). La La Land");
+     ans2.setText("B). Moonlight");
+     ans3.setText("C). Manchester by the Sea");
+     ans4.setText("D). Sucicide Squad");
  }
 if(callquestion==8){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
+     Question.setText("Which of the following is not a type of constructor?");
+     ans1.setText("A). Copy constructor");
+     ans2.setText("B). Friend constructor");
+     ans3.setText("C). Default constructor");
+     ans4.setText("D). Parameterized constructor");
+ 
  }
 if(callquestion==9){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==10){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==11){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==12){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
+     Question.setText("What is the Capital of Thailand?");
+     ans1.setText("A). Chiang rai");
+     ans2.setText("B). Samui");
+     ans3.setText("C). Bangkok");
+     ans4.setText("D). Ladda Land");
+ }if(callquestion==10){
+     Question.setText("What is the Capital of China?");
+     ans1.setText("A). Sarajevo ");
+     ans2.setText("B). Beiling");
+     ans3.setText("C). Macau");
+     ans4.setText("D). Beijing");
  }
 if(callquestion==13){
      Question.setText("");
