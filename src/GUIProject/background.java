@@ -111,7 +111,7 @@ public class background extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        this.setVisible(false);
+//        this.setVisible(false);
         new question1().setVisible(true);
     }//GEN-LAST:event_StartActionPerformed
 
