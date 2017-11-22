@@ -28,7 +28,6 @@ public class background extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         Start = new javax.swing.JButton();
         Exit = new javax.swing.JButton();
@@ -46,28 +45,10 @@ public class background extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 0));
-
         title.setBackground(new java.awt.Color(255, 255, 255));
         title.setFont(new java.awt.Font("OCR A Std", 1, 50)); // NOI18N
-        title.setText("LET'S GET RICH");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 520, 130));
+        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/tille1.gif"))); // NOI18N
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
         Start.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 55)); // NOI18N
         Start.setText("START");
@@ -90,14 +71,14 @@ public class background extends javax.swing.JFrame {
         jPanel1.add(Exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 540, 90, 40));
 
         coin.setForeground(new java.awt.Color(255, 255, 255));
-        coin.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\gold-coin-splash-bingo-jackpot-win-casino-poker-coins-vector-d-background-realistic-golden-dollar-explosion-illustration-game-100250406.png")); // NOI18N
+        coin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/gold-coin-splash-bingo-jackpot-win-casino-poker-coins-vector-d-background-realistic-golden-dollar-explosion-illustration-game-100250406.png"))); // NOI18N
         jPanel1.add(coin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
-        money.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\19.event.sourcing.png")); // NOI18N
+        money.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/19.event.sourcing.png"))); // NOI18N
         money.setText("jLabel1");
         jPanel1.add(money, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        GIFbackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Pictures\\Saved Pictures\\16DCbx.gif")); // NOI18N
+        GIFbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/16DCbx.gif"))); // NOI18N
         GIFbackground.setText("jLabel1");
         jPanel1.add(GIFbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
@@ -156,7 +137,6 @@ public class background extends javax.swing.JFrame {
     private javax.swing.JButton Start;
     private javax.swing.JLabel coin;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel money;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
