@@ -13,6 +13,14 @@ import static java.awt.Color.WHITE;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class question1 extends javax.swing.JFrame {
 
     int callquestion;
@@ -21,10 +29,35 @@ public class question1 extends javax.swing.JFrame {
      */
     public void init(){
     callquestion=0;
-}
+}   
     public question1() {
         initComponents();
     }
+    public List <String> Questions = new ArrayList<>();
+    public List <String> Ans1 = new ArrayList<>();
+    public List <String> Ans2 = new ArrayList<>();
+    public List <String> Ans3 = new ArrayList<>();
+    public List <String> Ans4 = new ArrayList<>();
+     
+    public void init(String filename , List a) {
+		File file = new File(filename);
+		if (file == null) {
+			System.out.println("Could not access file " + file);
+			return;
+		}else{
+                    try {
+                      Scanner   reader = new Scanner(file);
+                        while (reader.hasNextLine()) {
+			a.add(reader.nextLine());
+                        
+		}
+                    } catch (FileNotFoundException ex) {
+                        Logger.getLogger(question1.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+		
+                }
+	}
+
      @SuppressWarnings("unchecked")
     int count=0;
     String[] imagenames={"starter.png"};
@@ -505,91 +538,97 @@ public class question1 extends javax.swing.JFrame {
         ans3.setBackground(WHITE);
         ans4.setBackground(WHITE);
         
+    init("src\\GUIProject\\image/question.TXT",Questions);
+    init("src\\GUIProject\\image/ans1.TXT",Ans1);
+    init("src\\GUIProject\\image/ans2.TXT",Ans2);
+    init("src\\GUIProject\\image/ans3.TXT",Ans3);
+    init("src\\GUIProject\\image/ans4.TXT",Ans4);
+    
  if(callquestion==1){
-     Question.setText("What are two types of Network?");
-     ans1.setText("A). WAN and LAN ");
-     ans2.setText("B). CAN and TAN");
-     ans3.setText("C). WLAN and CAN");
-     ans4.setText("D). PAN and DAN");
+     Question.setText(Questions.get(0));
+     ans1.setText(Ans1.get(0));
+     ans2.setText(Ans2.get(0));
+     ans3.setText(Ans3.get(0));
+     ans4.setText(Ans4.get(0));
  }
 if(callquestion==2){
-     Question.setText("What is the brain of any computer system?");
-     ans1.setText("A). Memory");
-     ans2.setText("B). ALU");
-     ans3.setText("C). CPU");
-     ans4.setText("D). Control unit");
+     Question.setText(Questions.get(1));
+     ans1.setText(Ans1.get(1));
+     ans2.setText(Ans2.get(1));
+     ans3.setText(Ans3.get(1));
+     ans4.setText(Ans4.get(1));
  }
 if(callquestion==3){
-     Question.setText("Which team won EURO 2016?");
-     ans1.setText("A). Spain ");
-     ans2.setText("B). Portugal");
-     ans3.setText("C). France");
-     ans4.setText("D). Germany");
+     Question.setText(Questions.get(2));
+     ans1.setText(Ans1.get(2));
+     ans2.setText(Ans2.get(2));
+     ans3.setText(Ans3.get(2));
+     ans4.setText(Ans4.get(2));
  }
 if(callquestion==4){
-     Question.setText("Which country have the most World cup titles?");
-     ans1.setText("A). Argentina");
-     ans2.setText("B). Germany");
-     ans3.setText("C). Brazil");
-     ans4.setText("D). Spain");
+     Question.setText(Questions.get(3));
+     ans1.setText(Ans1.get(3));
+     ans2.setText(Ans2.get(3));
+     ans3.setText(Ans3.get(3));
+     ans4.setText(Ans4.get(3));
  }
 if(callquestion==5){
-     Question.setText("Which movie won the best picture award of Oscar 2017?");
-     ans1.setText("A). La La Land");
-     ans2.setText("B). Zootopia");
-     ans3.setText("C). Manchester by the Sea");
-     ans4.setText("D). Moonlight");
+     Question.setText(Questions.get(4));
+     ans1.setText(Ans1.get(4));
+     ans2.setText(Ans2.get(4));
+     ans3.setText(Ans3.get(4));
+     ans4.setText(Ans4.get(4));
  }
 if(callquestion==6){
-     Question.setText("What is the value of (2*3)+(4*5)?");
-     ans1.setText("A). 23");
-     ans2.setText("B). 26");
-     ans3.setText("C). 25");
-     ans4.setText("D). 20");
+     Question.setText(Questions.get(5));
+     ans1.setText(Ans1.get(5));
+     ans2.setText(Ans2.get(5));
+     ans3.setText(Ans3.get(5));
+     ans4.setText(Ans4.get(5));
  }
 if(callquestion==7){
-     Question.setText("Which movie won the best original song award of Oscar 2017?");
-     ans1.setText("A). La La Land");
-     ans2.setText("B). Moonlight");
-     ans3.setText("C). Manchester by the Sea");
-     ans4.setText("D). Sucicide Squad");
+     Question.setText(Questions.get(6));
+     ans1.setText(Ans1.get(6));
+     ans2.setText(Ans2.get(6));
+     ans3.setText(Ans3.get(6));
+     ans4.setText(Ans4.get(6));
  }
 if(callquestion==8){
-     Question.setText("Which of the following is not a type of constructor?");
-     ans1.setText("A). Copy constructor");
-     ans2.setText("B). Friend constructor");
-     ans3.setText("C). Default constructor");
-     ans4.setText("D). Parameterized constructor");
+     Question.setText(Questions.get(7));
+     ans1.setText(Ans1.get(7));
+     ans2.setText(Ans2.get(7));
+     ans3.setText(Ans3.get(7));
+     ans4.setText(Ans4.get(7));
  
  }
 if(callquestion==9){
-     Question.setText("What is the Capital of Thailand?");
-     ans1.setText("A). Chiang rai");
-     ans2.setText("B). Samui");
-     ans3.setText("C). Bangkok");
-     ans4.setText("D). Ladda Land");
+     Question.setText(Questions.get(8));
+     ans1.setText(Ans1.get(8));
+     ans2.setText(Ans2.get(8));
+     ans3.setText(Ans3.get(8));
+     ans4.setText(Ans4.get(8));
  }if(callquestion==10){
-     Question.setText("What is the Capital of China?");
-     ans1.setText("A). Sarajevo ");
-     ans2.setText("B). Beiling");
-     ans3.setText("C). Macau");
-     ans4.setText("D). Beijing");
+     Question.setText(Questions.get(9));
+     ans1.setText(Ans1.get(9));
+     ans2.setText(Ans2.get(9));
+     ans3.setText(Ans3.get(9));
+     ans4.setText(Ans4.get(9));
+ }
+if(callquestion==11){
+     Question.setText(Questions.get(10));
+     ans1.setText(Ans1.get(10));
+     ans2.setText(Ans2.get(10));
+     ans3.setText(Ans3.get(10));
+     ans4.setText(Ans4.get(10));
+ }
+if(callquestion==12){
+     Question.setText("");
+     ans1.setText("A). ");
+     ans2.setText("B). ");
+     ans3.setText("C). ");
+     ans4.setText("D). ");
  }
 if(callquestion==13){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==14){
-     Question.setText("");
-     ans1.setText("A). ");
-     ans2.setText("B). ");
-     ans3.setText("C). ");
-     ans4.setText("D). ");
- }
-if(callquestion==15){
      Question.setText("");
      ans1.setText("A). ");
      ans2.setText("B). ");
