@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.List;
@@ -23,15 +24,21 @@ import java.util.logging.Logger;
 
 public class question1 extends javax.swing.JFrame {
 
-    int callquestion;
     /**
      * Creates new form question1
-     */
-    public void init(){
-    callquestion=0;
-}   
+     */  
+    boolean [] ard = new boolean[15];
+    Random rd = new Random();
+    static int count=0;
+    
+    public void setRandom(){
+    for(int i=0; i< ard.length;i++){
+        ard[i] = true;
+    }
+    }
     public question1() {
         initComponents();
+        setRandom();
     }
     public List <String> Questions = new ArrayList<>();
     public List <String> Ans1 = new ArrayList<>();
@@ -59,7 +66,7 @@ public class question1 extends javax.swing.JFrame {
 	}
 
      @SuppressWarnings("unchecked")
-    int count=0;
+
     String[] imagenames={"starter.png"};
     int money=0;
     String[] immoney={"starter.png"};
@@ -532,19 +539,34 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-    callquestion=callquestion+1;
+    
         ans1.setBackground(WHITE);
         ans2.setBackground(WHITE);
         ans3.setBackground(WHITE);
         ans4.setBackground(WHITE);
         
-    init("src\\GUIProject\\image/question.TXT",Questions);
-    init("src\\GUIProject\\image/ans1.TXT",Ans1);
-    init("src\\GUIProject\\image/ans2.TXT",Ans2);
-    init("src\\GUIProject\\image/ans3.TXT",Ans3);
-    init("src\\GUIProject\\image/ans4.TXT",Ans4);
+    init("src\\GUIProject\\QandA/question.TXT",Questions);
+    init("src\\GUIProject\\QandA/ans1.TXT",Ans1);
+    init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
+    init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
+    init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
+   
+    int callquestion = 0;
     
- if(callquestion==1){
+    while (true){
+    if(count >= 15)
+         break;
+    
+    callquestion = rd.nextInt(15)+1;
+     if(!ard[callquestion-1]==false){
+           ard[callquestion-1] = false;
+           count++;
+           System.out.println(count);
+           break;
+      }
+     
+    }
+ if(callquestion == 1){
      Question.setText(Questions.get(0));
      ans1.setText(Ans1.get(0));
      ans2.setText(Ans2.get(0));
@@ -648,7 +670,7 @@ if(callquestion==13){
     }//GEN-LAST:event_formWindowActivated
 
     private void HelpbuttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpbuttonMouseClicked
- 
+  
     }//GEN-LAST:event_HelpbuttonMouseClicked
 
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
