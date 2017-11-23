@@ -7,7 +7,7 @@ C). Manchester by the Sea
 C). Default constructor
 C). Bangkok
 C). Macau
-C). Both size & length
+C). Both size & length 
 C). Camels
 C). Java Software Foundation
 C). Peter Schiff
@@ -15,6 +15,6 @@ C). .class
 C). Euro
 C). Siamsport
 C). Cyprus
-C). Jame Gosling 
+C). Jame Gosling
 C). class
 C). Ada

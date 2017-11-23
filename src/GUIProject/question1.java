@@ -31,6 +31,7 @@ public class question1 extends javax.swing.JFrame {
     Random rd = new Random();
     static int count=0;
     static int callquestion = 0;
+     static int winCount = 0 ;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -46,6 +47,7 @@ public class question1 extends javax.swing.JFrame {
     public List <String> Ans2 = new ArrayList<>();
     public List <String> Ans3 = new ArrayList<>();
     public List <String> Ans4 = new ArrayList<>();
+    public List <String> Answer = new ArrayList<>();
      
     public void init(String filename , List a) {
 		File file = new File(filename);
@@ -68,28 +70,34 @@ public class question1 extends javax.swing.JFrame {
 
      @SuppressWarnings("unchecked")
 
-    String[] imagenames={"starter.png"};
-    int money=0;
-    String[] immoney={"starter.png"};
-    int money1=0;
-    String[]immoney1={"money1.jpg"};
-    int money2=0;
-    String[]immoney2={"money2.png"};
-    int money3=0;
-    String[]immoney3={"money3.png"};
-    int money4=0;
-    String[]immoney4={"money4.png"};
-    int money5=0;
-    String[]immoney5={"money5.png"};
-    int money6=0;
-    String[]immoney6={"money6.png"};
-    int money7=0;
-    String[]immoney7={"money7.png"};
-    int money8=0;
-    String[]immoney8={"money8.png"};
-    int money9=0;
-    String[]immoney9={"money9.png"};
-    
+    public String returnSetImage(int what){
+        if(what == 0)
+            return "starter.png";
+        else if(what == 1 )
+            return "money1.jpg";
+        else if(what == 2 )
+            return "money2.png"; 
+        else if(what == 3 )
+            return "money3.png"; 
+        else if(what == 4 )
+            return "money4.png"; 
+        else if(what == 5 )
+            return "money5.png"; 
+        else if(what == 6 )
+            return "money6.png"; 
+        else if(what == 7 )
+            return "money7.png"; 
+        else if(what == 8 )
+            return "money8.png"; 
+        else if(what == 9 )
+            return "money9.png"; 
+        else 
+            return null;
+    }
+    public void setImagePrice(){
+        System.out.println(winCount);
+        Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/"+returnSetImage(winCount))));
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -129,7 +137,7 @@ public class question1 extends javax.swing.JFrame {
                 NextbuttonActionPerformed(evt);
             }
         });
-        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 170, 80));
+        Background.add(Nextbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 170, 80));
 
         Helpbutton.setBackground(new java.awt.Color(0, 0, 0));
         Helpbutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/123240_F_23491219_chLIEgNXQ14097Th8BW1iLDdX9nfrFAJ.jpg"))); // NOI18N
@@ -166,7 +174,7 @@ public class question1 extends javax.swing.JFrame {
                 QuestionActionPerformed(evt);
             }
         });
-        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 480, 70));
+        Background.add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 520, 70));
 
         ans1.setEditable(false);
         ans1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -182,7 +190,7 @@ public class question1 extends javax.swing.JFrame {
                 ans1ActionPerformed(evt);
             }
         });
-        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 210, 50));
+        Background.add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 240, 50));
 
         ans2.setEditable(false);
         ans2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -198,7 +206,7 @@ public class question1 extends javax.swing.JFrame {
                 ans2ActionPerformed(evt);
             }
         });
-        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 210, 50));
+        Background.add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 240, 50));
 
         ans4.setEditable(false);
         ans4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -214,7 +222,7 @@ public class question1 extends javax.swing.JFrame {
                 ans4ActionPerformed(evt);
             }
         });
-        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 210, 50));
+        Background.add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 240, 50));
 
         ans3.setEditable(false);
         ans3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
@@ -230,7 +238,7 @@ public class question1 extends javax.swing.JFrame {
                 ans3ActionPerformed(evt);
             }
         });
-        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 210, 50));
+        Background.add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 240, 50));
 
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/starter.png"))); // NOI18N
         Price.setText("jLabel1");
@@ -257,145 +265,32 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
-
-        if(callquestion==1 && ans1.isFocusable()){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney1[i]));
-                
-           }
-           if(money1<0)money1=1;
-           if(money1>=0 && money1< immoney1.length){
-               Price.setIcon(imagelist1[money1]);
-          money1++;
-           }
-        }
-        if(callquestion==2){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);
-          }
-        if(callquestion==3 ){
-         ans1.setOpaque(true);
-        ans1.setBackground(Color.red); 
-        }
-        if(callquestion==4){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);
-        }
-        if(callquestion==5){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);
-        } 
-        if(callquestion==6){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);
-        }  
-        if(callquestion==7 && ans1.isFocusable()){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney7[i]));
-                
-           }
-           if(money7<0)money7=1;
-           if(money7>=0 && money7< immoney7.length){
-               Price.setIcon(imagelist1[money7]);
-          money7++;
-           }}   
-         
-        if(callquestion==8){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);}
-         if(callquestion==9){
-        ans1.setOpaque(true);
-        ans1.setBackground(Color.red);
-    
-    }                                 
-           
-           
+            if(Ans1.get(callquestion-1).equals(Answer.get(callquestion-1))){
+                ans1.setOpaque(true);
+                ans1.setBackground(Color.green);
+                winCount++;
+            }else{
+                ans1.setOpaque(true);
+                ans1.setBackground(Color.red);
+                if(winCount<=0){
+                    WAFQ w  = new WAFQ();
+                    w.setVisible(true);
+                    this.setVisible(false);
+                }else winCount--;
+            }
+       setImagePrice();
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-
-        if(callquestion==1 && ans3.isFocusable()){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        WAFQ w = new WAFQ();
-        w.setVisible(true);
-         }
-        if(callquestion==2 && ans3.isFocusable()){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney2[i]));
-                
-           }
-           if(money2<0)money2=1;
-           if(money2>=0 && money2< immoney2.length){
-               Price.setIcon(imagelist1[money2]);
-          money2++;
-           }
-         }
-        if(callquestion==3){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        }
-         if(callquestion==4 && ans3.isFocusable()){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney4[i]));     
-           }
-           if(money4<0)money4=1;
-           if(money4>=0 && money4< immoney4.length){
-               Price.setIcon(imagelist1[money4]);
-          money4++;
-           }       
-        }
-         
-        
-        if(callquestion==5){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        }
-        if(callquestion==6){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-        }
-       if(callquestion==7){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-      }
-       if(callquestion==8){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.red);
-      }
-       
-       if(callquestion==9 && ans3.isFocusable()){
-        ans3.setOpaque(true);
-        ans3.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney9[i]));
-                
-           }
-           if(money9<0)money9=1;
-           if(money9>=0 && money9< immoney9.length){
-               Price.setIcon(imagelist1[money9]);
-          money9++;
-           }       }
-
-    
+            if(Ans3.get(callquestion-1).equals(Answer.get(callquestion-1))){
+                ans3.setOpaque(true);
+                ans3.setBackground(Color.green);
+                winCount++;
+            }else{
+                ans3.setOpaque(true);
+                ans3.setBackground(Color.red);
+            }
+        setImagePrice();
     }//GEN-LAST:event_ans3MouseClicked
 
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
@@ -403,55 +298,15 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans4ActionPerformed
 
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
-
-        if(callquestion==1 && ans4.isFocusable()){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);
-        WAFQ w = new WAFQ();
-        w.setVisible(true);
-         }
-        if(callquestion==2){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);
-         }
-        if(callquestion==3){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);
-         }
-        if(callquestion==4){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);
-         }
-        if(callquestion==5 && ans4.isFocusable()){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney5[i]));    
-           }
-           if(money5<0)money5=1;
-           if(money5>=0 && money5< immoney5.length){
-               Price.setIcon(imagelist1[money5]);
-          money5++;
-           }       
-         
-         }
-        
-        if(callquestion==6){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);}
-        if(callquestion==7){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);}
-        if(callquestion==8){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);}
-        if(callquestion==9){
-        ans4.setOpaque(true);
-        ans4.setBackground(Color.red);}
-         
-         
+            if(Ans4.get(callquestion-1).equals(Answer.get(callquestion-1))){
+                ans4.setOpaque(true);
+                ans4.setBackground(Color.green);
+                winCount++;
+            }else{
+                ans4.setOpaque(true);
+                ans4.setBackground(Color.red);
+            }
+        setImagePrice();
     }//GEN-LAST:event_ans4MouseClicked
 
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
@@ -459,74 +314,15 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2ActionPerformed
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-         
-        if(callquestion==1 && ans2.isFocusable()){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);
-        WAFQ w = new WAFQ();
-        w.setVisible(true);
-        }
-        if(callquestion==2){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        if(callquestion==3 && ans2.isFocusable()){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney3[i]));
-                
-           }
-           if(money3<0)money3=1;
-           if(money3>=0 && money3< immoney3.length){
-               Price.setIcon(imagelist1[money3]);
-          money3++;
-           }       
-         }
-        if(callquestion==4){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        if(callquestion==5){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        if(callquestion==6 && ans2.isFocusable()){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.green);
-         ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney6[i]));
-                
-           }
-           if(money6<0)money6=1;
-           if(money6>=0 && money6< immoney6.length){
-            Price.setIcon(imagelist1[money6]);
-          money6++;
-           }       
-         }
-        if(callquestion==7){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        
-       if(callquestion==8 && ans2.isFocusable()){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.green);
-        
-        ImageIcon[] imagelist1=new ImageIcon[1];
-           for (int i = 0; i < imagelist1.length; i++) {
-         imagelist1[i]=new ImageIcon(getClass().getResource("/GUIProject/image/"+immoney8[i]));
-                
-           }
-           if(money8<0)money8=1;
-           if(money8>=0 && money8< immoney8.length){
-               Price.setIcon(imagelist1[money8]);
-          money8++;
-           }   }
-      
-        if(callquestion==9){
-        ans2.setOpaque(true);
-        ans2.setBackground(Color.red);}
-        
+         if(Ans2.get(callquestion-1).equals(Answer.get(callquestion-1))){
+                ans2.setOpaque(true);
+                ans2.setBackground(Color.green);
+                winCount++;
+            }else{
+                ans2.setOpaque(true);
+                ans2.setBackground(Color.red);
+            }
+        setImagePrice();
     }//GEN-LAST:event_ans2MouseClicked
 
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
@@ -551,6 +347,7 @@ public class question1 extends javax.swing.JFrame {
     init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
     init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
     init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
+     init("src\\GUIProject\\QandA/Answer.TXT",Answer);
     
     while (true){
     if(count >= 20)
@@ -560,7 +357,6 @@ public class question1 extends javax.swing.JFrame {
      if(!ard[callquestion-1]==false){
            ard[callquestion-1] = false;
            count++;
-           System.out.println(count);
            break;
       }
     }

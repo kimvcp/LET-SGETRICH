@@ -13,7 +13,7 @@ D). Sun Microsystems
 D). Mark Zuckerberge
 D). .obj
 D). Rupee
-D). TrueMove H 
+D). TrueMove H
 D). Dominica
 D). Dennis Ritchie
 D). goto

@@ -8,7 +8,7 @@ B). Friend constructor
 B). Samui
 B). Beiling
 B). size
-B). Flamingos 
+B). Flamingos
 B). Oracle Corporation
 B). Dustin Moskovitz
 B). .exe
