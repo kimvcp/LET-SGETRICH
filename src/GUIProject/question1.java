@@ -32,8 +32,7 @@ public class question1 extends javax.swing.JFrame {
     static int count=0;
     static int callquestion = 0;
     static int winCount = 0 ;
-    static int click = 1;
-    static int help = 3;
+    private int c = 1;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -43,13 +42,22 @@ public class question1 extends javax.swing.JFrame {
     public question1() {
         initComponents();
         setRandom();
-        click = 0;
+        this.c = 0;
          Question.setText("Are You Ready?");
         ans1.setText("");
         ans2.setText("");
         ans3.setText("");
         ans4.setText("");
     }
+    
+    public int getC(){
+        return this.c;
+    }
+   
+    public void setC(int num){
+        this.c = num;
+    }
+    
     public List <String> Questions = new ArrayList<>();
     public List <String> Ans1 = new ArrayList<>();
     public List <String> Ans2 = new ArrayList<>();
@@ -107,19 +115,20 @@ public class question1 extends javax.swing.JFrame {
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/"+returnSetImage(winCount))));
     }
     public void runNextButt(){
-         click = 1;    
+         c = 1;    
         ans1.setBackground(WHITE);
         ans2.setBackground(WHITE);
         ans3.setBackground(WHITE);
         ans4.setBackground(WHITE);
         
-    init("src\\GUIProject\\QandA/question.TXT",Questions);
-    init("src\\GUIProject\\QandA/ans1.TXT",Ans1);
-    init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
-    init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
-    init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
-     init("src\\GUIProject\\QandA/Answer.TXT",Answer);
+    init("src//GUIProject//QandA/question.TXT",Questions);
+    init("src//GUIProject//QandA/ans1.TXT",Ans1);
+    init("src//GUIProject//QandA/ans2.TXT",Ans2);
+    init("src//GUIProject//QandA/ans3.TXT",Ans3);
+    init("src//GUIProject//QandA/ans4.TXT",Ans4);
+     init("src//GUIProject//QandA/Answer.TXT",Answer);
     
+
     while (true){
     if(count >= 20)
          break;
@@ -303,7 +312,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
-            if(click == 1){
+            if(c == 1){
             if(Ans1.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 winCount++;
                 ans1.setOpaque(true);
@@ -316,19 +325,19 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    click = 1 ;
+                    c = 1 ;
                 }else{
                     winCount--;
                 }
              }
-            click = 0;
+            c = 0;
             setImagePrice();
             }
        
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-        if(click == 1){   
+        if(c == 1){   
         if(Ans3.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans3.setOpaque(true);
                 ans3.setBackground(Color.green);
@@ -340,10 +349,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    click = 1;
+                    c = 1;
                 }else winCount--;
             }
-             click = 0;
+             c = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans3MouseClicked
@@ -353,7 +362,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans4ActionPerformed
 
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
-        if(click == 1){    
+        if(c == 1){    
         if(Ans4.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans4.setOpaque(true);
                 ans4.setBackground(Color.green);
@@ -365,10 +374,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    click = 1;
+                    c = 1;
                 }else winCount--;
             }
-       click = 0;
+       c = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans4MouseClicked
@@ -378,7 +387,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2ActionPerformed
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-        if(click == 1){
+        if(c == 1){
         if(Ans2.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans2.setOpaque(true);
                 ans2.setBackground(Color.green);
@@ -390,10 +399,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    click = 1;
+                    c = 1;
                 }else winCount--;
             }
-       click = 0;
+       c = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans2MouseClicked
@@ -405,15 +414,16 @@ public class question1 extends javax.swing.JFrame {
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
        Help h = new Help();
        h.setVisible(true);
-       this.setVisible(false);
+
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-        if(click==0){
-            runNextButt();
-           
-        }
-        
+ if(c==0){
+  runNextButt();     
+ }
+ 
+    
+
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")
