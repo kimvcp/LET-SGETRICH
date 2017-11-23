@@ -54,8 +54,8 @@ public class WAFQ extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
-    question1 q = new question1();
-    q.setVisible(true);
+    background b = new background();
+    b.setVisible(true);
     this.setVisible(false);
     }//GEN-LAST:event_tryAgainActionPerformed
 

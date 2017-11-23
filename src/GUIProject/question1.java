@@ -31,7 +31,8 @@ public class question1 extends javax.swing.JFrame {
     Random rd = new Random();
     static int count=0;
     static int callquestion = 0;
-     static int winCount = 0 ;
+    static int winCount = 0 ;
+    static int c = 1;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -41,6 +42,11 @@ public class question1 extends javax.swing.JFrame {
     public question1() {
         initComponents();
         setRandom();
+         Question.setText("Are You Ready?");
+        ans1.setText("");
+        ans2.setText("");
+        ans3.setText("");
+        ans4.setText("");
     }
     public List <String> Questions = new ArrayList<>();
     public List <String> Ans1 = new ArrayList<>();
@@ -98,6 +104,38 @@ public class question1 extends javax.swing.JFrame {
         System.out.println(winCount);
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/"+returnSetImage(winCount))));
     }
+    public void runNextButt(){
+         c = 1;    
+        ans1.setBackground(WHITE);
+        ans2.setBackground(WHITE);
+        ans3.setBackground(WHITE);
+        ans4.setBackground(WHITE);
+        
+    init("src\\GUIProject\\QandA/question.TXT",Questions);
+    init("src\\GUIProject\\QandA/ans1.TXT",Ans1);
+    init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
+    init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
+    init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
+     init("src\\GUIProject\\QandA/Answer.TXT",Answer);
+    
+    while (true){
+    if(count >= 20)
+         break;
+    
+    callquestion = rd.nextInt(20)+1;
+     if(!ard[callquestion-1]==false){
+           ard[callquestion-1] = false;
+           count++;
+           break;
+      }
+    }
+    Question.setText(Questions.get(callquestion-1));
+     ans1.setText(Ans1.get(callquestion-1));
+     ans2.setText(Ans2.get(callquestion-1));
+     ans3.setText(Ans3.get(callquestion-1));
+     ans4.setText(Ans4.get(callquestion-1));
+     
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -113,7 +151,6 @@ public class question1 extends javax.swing.JFrame {
         ans3 = new javax.swing.JTextField();
         Price = new javax.swing.JLabel();
         SandTime = new javax.swing.JLabel();
-        Jackpot = new javax.swing.JLabel();
         GIFBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -250,7 +287,6 @@ public class question1 extends javax.swing.JFrame {
         SandTime.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/sandtime.png"))); // NOI18N
         SandTime.setText("jLabel1");
         Background.add(SandTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, 160, 180));
-        Background.add(Jackpot, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 220, 70));
 
         GIFBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/f43d23e7d0d90607f2e3d473fb15a261.gif"))); // NOI18N
         Background.add(GIFBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -265,10 +301,12 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
+            if(c == 1){
             if(Ans1.get(callquestion-1).equals(Answer.get(callquestion-1))){
+                winCount++;
                 ans1.setOpaque(true);
                 ans1.setBackground(Color.green);
-                winCount++;
+               
             }else{
                 ans1.setOpaque(true);
                 ans1.setBackground(Color.red);
@@ -276,21 +314,36 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                }else winCount--;
+                    c = 1 ;
+                }else{
+                    winCount--;
+                }
+             }
+            c = 0;
+            setImagePrice();
             }
-       setImagePrice();
+       
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-            if(Ans3.get(callquestion-1).equals(Answer.get(callquestion-1))){
+        if(c == 1){   
+        if(Ans3.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans3.setOpaque(true);
                 ans3.setBackground(Color.green);
                 winCount++;
             }else{
                 ans3.setOpaque(true);
                 ans3.setBackground(Color.red);
+                if(winCount<=0){
+                    WAFQ w  = new WAFQ();
+                    w.setVisible(true);
+                    this.setVisible(false);
+                    c = 1;
+                }else winCount--;
             }
-        setImagePrice();
+             c = 0;
+            setImagePrice();
+            }
     }//GEN-LAST:event_ans3MouseClicked
 
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
@@ -298,15 +351,24 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans4ActionPerformed
 
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
-            if(Ans4.get(callquestion-1).equals(Answer.get(callquestion-1))){
+        if(c == 1){    
+        if(Ans4.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans4.setOpaque(true);
                 ans4.setBackground(Color.green);
                 winCount++;
             }else{
                 ans4.setOpaque(true);
                 ans4.setBackground(Color.red);
+                if(winCount<=0){
+                    WAFQ w  = new WAFQ();
+                    w.setVisible(true);
+                    this.setVisible(false);
+                    c = 1;
+                }else winCount--;
             }
-        setImagePrice();
+       c = 0;
+            setImagePrice();
+            }
     }//GEN-LAST:event_ans4MouseClicked
 
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
@@ -314,15 +376,24 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2ActionPerformed
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-         if(Ans2.get(callquestion-1).equals(Answer.get(callquestion-1))){
+        if(c == 1){
+        if(Ans2.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans2.setOpaque(true);
                 ans2.setBackground(Color.green);
                 winCount++;
             }else{
                 ans2.setOpaque(true);
                 ans2.setBackground(Color.red);
+                if(winCount<=0){
+                    WAFQ w  = new WAFQ();
+                    w.setVisible(true);
+                    this.setVisible(false);
+                    c = 1;
+                }else winCount--;
             }
-        setImagePrice();
+       c = 0;
+            setImagePrice();
+            }
     }//GEN-LAST:event_ans2MouseClicked
 
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
@@ -336,45 +407,11 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-    
-        ans1.setBackground(WHITE);
-        ans2.setBackground(WHITE);
-        ans3.setBackground(WHITE);
-        ans4.setBackground(WHITE);
-        
-    init("src\\GUIProject\\QandA/question.TXT",Questions);
-    init("src\\GUIProject\\QandA/ans1.TXT",Ans1);
-    init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
-    init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
-    init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
-     init("src\\GUIProject\\QandA/Answer.TXT",Answer);
-    
-    while (true){
-    if(count >= 20)
-         break;
-    
-    callquestion = rd.nextInt(20)+1;
-     if(!ard[callquestion-1]==false){
-           ard[callquestion-1] = false;
-           count++;
-           break;
-      }
-    }
-    Question.setText(Questions.get(callquestion-1));
-     ans1.setText(Ans1.get(callquestion-1));
-     ans2.setText(Ans2.get(callquestion-1));
-     ans3.setText(Ans3.get(callquestion-1));
-     ans4.setText(Ans4.get(callquestion-1));
-     
+       runNextButt();
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-       Question.setText("Are You Ready?");
-       ans1.setText("");
-       ans2.setText("");
-       ans3.setText("");
-       ans4.setText("");
 
     }//GEN-LAST:event_formWindowActivated
 
@@ -432,7 +469,6 @@ public class question1 extends javax.swing.JFrame {
     private javax.swing.JPanel Background;
     private javax.swing.JLabel GIFBackground;
     private javax.swing.JButton Helpbutton;
-    private javax.swing.JLabel Jackpot;
     private javax.swing.JButton Nextbutton;
     private javax.swing.JLabel Price;
     private javax.swing.JTextField Question;

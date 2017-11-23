@@ -16,7 +16,9 @@ public class Help extends javax.swing.JFrame {
      */
     public Help() {
         initComponents();
+        Hint.setVisible(false);
     }
+    question1 q = new question1();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,7 +30,10 @@ public class Help extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
+        HintB = new javax.swing.JButton();
+        Skip = new javax.swing.JButton();
+        Hint = new javax.swing.JTextField();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -36,14 +41,42 @@ public class Help extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
-        jButton1.setText("BACK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Back.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        Back.setText("BACK");
+        Back.setMaximumSize(new java.awt.Dimension(101, 47));
+        Back.setMinimumSize(new java.awt.Dimension(101, 47));
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 160, 120));
+        jPanel1.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 60));
+
+        HintB.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
+        HintB.setText("HINT");
+        HintB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HintBActionPerformed(evt);
+            }
+        });
+        jPanel1.add(HintB, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 180, 100));
+
+        Skip.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
+        Skip.setText("SKIP");
+        Skip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SkipActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Skip, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 180, 90));
+
+        Hint.setFont(new java.awt.Font("Prestige Elite Std", 0, 36)); // NOI18N
+        Hint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HintActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Hint, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 570, 160));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/8bitflyingmoney.gif"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -53,12 +86,27 @@ public class Help extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
        
              question1 q = new question1();
              q.setVisible(true);
              this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BackActionPerformed
+
+    private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
+        Hint.setVisible(true);
+        Hint.setText("Kim");
+    }//GEN-LAST:event_HintBActionPerformed
+
+    private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
+        q.setVisible(true);
+        this.setVisible(false);
+        q.runNextButt();
+    }//GEN-LAST:event_SkipActionPerformed
+
+    private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HintActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,8 +145,11 @@ public class Help extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
+    private javax.swing.JTextField Hint;
+    private javax.swing.JButton HintB;
+    private javax.swing.JButton Skip;
     private javax.swing.JLabel background;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
