@@ -5,6 +5,10 @@
  */
 package GUIProject;
 
+import static GUIProject.question1.callquestion;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author HP
@@ -19,7 +23,8 @@ public class Help extends javax.swing.JFrame {
         Hint.setVisible(false);
     }
     question1 q = new question1();
-
+  public List <String> hint = new ArrayList<>();
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -88,20 +93,24 @@ public class Help extends javax.swing.JFrame {
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
        
-             question1 q = new question1();
-             q.setVisible(true);
+ 
              this.setVisible(false);
+             q.setC(1);
     }//GEN-LAST:event_BackActionPerformed
 
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
         Hint.setVisible(true);
-        Hint.setText("Kim");
+        q.init("src//GUIProject//QandA/Hint.TXT",hint);
+        Hint.setText(hint.get(callquestion-1));
+        
+       
     }//GEN-LAST:event_HintBActionPerformed
 
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
         q.setVisible(true);
         this.setVisible(false);
         q.runNextButt();
+        q.setImagePrice();
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed

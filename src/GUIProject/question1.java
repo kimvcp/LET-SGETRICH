@@ -32,7 +32,7 @@ public class question1 extends javax.swing.JFrame {
     static int count=0;
     static int callquestion = 0;
     static int winCount = 0 ;
-    static int c = 1;
+    private int c = 1;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -42,12 +42,22 @@ public class question1 extends javax.swing.JFrame {
     public question1() {
         initComponents();
         setRandom();
+        this.c = 0;
          Question.setText("Are You Ready?");
         ans1.setText("");
         ans2.setText("");
         ans3.setText("");
         ans4.setText("");
     }
+    
+    public int getC(){
+        return this.c;
+    }
+   
+    public void setC(int num){
+        this.c = num;
+    }
+    
     public List <String> Questions = new ArrayList<>();
     public List <String> Ans1 = new ArrayList<>();
     public List <String> Ans2 = new ArrayList<>();
@@ -111,13 +121,14 @@ public class question1 extends javax.swing.JFrame {
         ans3.setBackground(WHITE);
         ans4.setBackground(WHITE);
         
-    init("src\\GUIProject\\QandA/question.TXT",Questions);
-    init("src\\GUIProject\\QandA/ans1.TXT",Ans1);
-    init("src\\GUIProject\\QandA/ans2.TXT",Ans2);
-    init("src\\GUIProject\\QandA/ans3.TXT",Ans3);
-    init("src\\GUIProject\\QandA/ans4.TXT",Ans4);
-     init("src\\GUIProject\\QandA/Answer.TXT",Answer);
+    init("src//GUIProject//QandA/question.TXT",Questions);
+    init("src//GUIProject//QandA/ans1.TXT",Ans1);
+    init("src//GUIProject//QandA/ans2.TXT",Ans2);
+    init("src//GUIProject//QandA/ans3.TXT",Ans3);
+    init("src//GUIProject//QandA/ans4.TXT",Ans4);
+     init("src//GUIProject//QandA/Answer.TXT",Answer);
     
+
     while (true){
     if(count >= 20)
          break;
@@ -403,11 +414,16 @@ public class question1 extends javax.swing.JFrame {
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
        Help h = new Help();
        h.setVisible(true);
-       this.setVisible(false);
+
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-       runNextButt();
+ if(c==0){
+  runNextButt();     
+ }
+ 
+    
+
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")
