@@ -32,7 +32,8 @@ public class question1 extends javax.swing.JFrame {
     static int count=0;
     static int callquestion = 0;
     static int winCount = 0 ;
-    static int c = 1;
+    static int click = 1;
+    static int help = 3;
     
     public void setRandom(){
     for(int i=0; i< ard.length;i++){
@@ -42,6 +43,7 @@ public class question1 extends javax.swing.JFrame {
     public question1() {
         initComponents();
         setRandom();
+        click = 0;
          Question.setText("Are You Ready?");
         ans1.setText("");
         ans2.setText("");
@@ -105,7 +107,7 @@ public class question1 extends javax.swing.JFrame {
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/"+returnSetImage(winCount))));
     }
     public void runNextButt(){
-         c = 1;    
+         click = 1;    
         ans1.setBackground(WHITE);
         ans2.setBackground(WHITE);
         ans3.setBackground(WHITE);
@@ -301,7 +303,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans1ActionPerformed
 
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
-            if(c == 1){
+            if(click == 1){
             if(Ans1.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 winCount++;
                 ans1.setOpaque(true);
@@ -314,19 +316,19 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    c = 1 ;
+                    click = 1 ;
                 }else{
                     winCount--;
                 }
              }
-            c = 0;
+            click = 0;
             setImagePrice();
             }
        
     }//GEN-LAST:event_ans1MouseClicked
 
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
-        if(c == 1){   
+        if(click == 1){   
         if(Ans3.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans3.setOpaque(true);
                 ans3.setBackground(Color.green);
@@ -338,10 +340,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    c = 1;
+                    click = 1;
                 }else winCount--;
             }
-             c = 0;
+             click = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans3MouseClicked
@@ -351,7 +353,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans4ActionPerformed
 
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
-        if(c == 1){    
+        if(click == 1){    
         if(Ans4.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans4.setOpaque(true);
                 ans4.setBackground(Color.green);
@@ -363,10 +365,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    c = 1;
+                    click = 1;
                 }else winCount--;
             }
-       c = 0;
+       click = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans4MouseClicked
@@ -376,7 +378,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2ActionPerformed
 
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
-        if(c == 1){
+        if(click == 1){
         if(Ans2.get(callquestion-1).equals(Answer.get(callquestion-1))){
                 ans2.setOpaque(true);
                 ans2.setBackground(Color.green);
@@ -388,10 +390,10 @@ public class question1 extends javax.swing.JFrame {
                     WAFQ w  = new WAFQ();
                     w.setVisible(true);
                     this.setVisible(false);
-                    c = 1;
+                    click = 1;
                 }else winCount--;
             }
-       c = 0;
+       click = 0;
             setImagePrice();
             }
     }//GEN-LAST:event_ans2MouseClicked
@@ -407,7 +409,11 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonActionPerformed
 
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
-       runNextButt();
+        if(click==0){
+            runNextButt();
+           
+        }
+        
     }//GEN-LAST:event_NextbuttonActionPerformed
 
     @SuppressWarnings("empty-statement")

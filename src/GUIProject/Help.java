@@ -95,13 +95,14 @@ public class Help extends javax.swing.JFrame {
 
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
         Hint.setVisible(true);
-        Hint.setText("Kim");
+        Hint.setText("");
     }//GEN-LAST:event_HintBActionPerformed
 
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
         q.setVisible(true);
         this.setVisible(false);
         q.runNextButt();
+        q.setImagePrice();
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed
