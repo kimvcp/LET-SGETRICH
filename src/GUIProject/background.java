@@ -93,6 +93,7 @@ public class background extends javax.swing.JFrame {
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         this.setVisible(false);
+        question1.help = 3;
         new question1().setVisible(true);
     }//GEN-LAST:event_StartActionPerformed
 

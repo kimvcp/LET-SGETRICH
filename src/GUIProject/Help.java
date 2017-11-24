@@ -18,13 +18,14 @@ public class Help extends javax.swing.JFrame {
     /**
      * Creates new form HelpJFrame
      */
+    private int h = 1;
+    question1 q = new question1();
+    public List <String> hint = new ArrayList<>();
     public Help() {
         initComponents();
         Hint.setVisible(false);
+        this.h = 1;
     }
-    question1 q = new question1();
-  public List <String> hint = new ArrayList<>();
- 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -94,22 +95,28 @@ public class Help extends javax.swing.JFrame {
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
 
              this.setVisible(false);
-             q.setC(1);
+             q.setClick(1);
     }//GEN-LAST:event_BackActionPerformed
 
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
+        if(h == 1 ){
         Hint.setVisible(true);
         q.init("src//GUIProject//QandA/Hint.TXT",hint);
         Hint.setText(hint.get(callquestion-1));
+        h = 0;
+        }
         
        
     }//GEN-LAST:event_HintBActionPerformed
 
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
+        if(h == 1 ){
         q.setVisible(true);
         this.setVisible(false);
         q.runNextButt();
         q.setImagePrice();
+        h = 0;
+    }
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed
@@ -149,7 +156,8 @@ public class Help extends javax.swing.JFrame {
             public void run() {
                 new Help().setVisible(true);
             }
-        });
+        }
+        );
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
