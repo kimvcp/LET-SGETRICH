@@ -17,7 +17,6 @@ public class background extends javax.swing.JFrame {
     public background() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -84,7 +83,7 @@ public class background extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        pack();
+        setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
@@ -92,9 +91,14 @@ public class background extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
+        question1 q = new question1();
+        q.helpCount = 3;
+        q.clickCount = 0;
+        q.questionCount = 0;
+        q.questionAmount = 1;
+        q.winCount = 0;
         this.setVisible(false);
-        question1.help = 3;
-        new question1().setVisible(true);
+        q.setVisible(true);
     }//GEN-LAST:event_StartActionPerformed
 
     /**

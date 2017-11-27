@@ -18,14 +18,16 @@ public class Help extends javax.swing.JFrame {
     /**
      * Creates new form HelpJFrame
      */
-    private int h = 1;
+    private int count = 1;
     question1 q = new question1();
-    public List <String> hint = new ArrayList<>();
+    public List<String> hint = new ArrayList<>();
+
     public Help() {
         initComponents();
         Hint.setVisible(false);
-        this.h = 1;
+        this.count = 1;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,14 +45,13 @@ public class Help extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Back.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
         Back.setText("BACK");
-        Back.setMaximumSize(new java.awt.Dimension(101, 47));
-        Back.setMinimumSize(new java.awt.Dimension(101, 47));
         Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackActionPerformed(evt);
@@ -89,34 +90,40 @@ public class Help extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        pack();
+        setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-
-             this.setVisible(false);
-             q.setClick(1);
+        q.setVisible(true);
+        this.setVisible(false);
+        q.clickCount = 1;
+        q.setCount();
+        q.setSaveQuestion();
+        q.setImagePrice();
     }//GEN-LAST:event_BackActionPerformed
 
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
-        if(h == 1 ){
-        Hint.setVisible(true);
-        q.init("src//GUIProject//QandA/Hint.TXT",hint);
-        Hint.setText(hint.get(callquestion-1));
-        h = 0;
+        if (count == 1) {
+            Hint.setVisible(true);
+            q.init("src//GUIProject//QandA/Hint.TXT", hint);
+            Hint.setText(hint.get(callquestion - 1));
+            count = 0;
+            q.clickCount = 1;
         }
-        
-       
+
+
     }//GEN-LAST:event_HintBActionPerformed
 
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
-        if(h == 1 ){
-        q.setVisible(true);
-        this.setVisible(false);
-        q.runNextButt();
-        q.setImagePrice();
-        h = 0;
-    }
+        if (count == 1) {
+            q.setVisible(true);
+            this.setVisible(false);
+            q.runNextButt();
+            q.setImagePrice();
+            count = 0;
+        }
+        q.clickCount = 1;
+        q.setCount();
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed

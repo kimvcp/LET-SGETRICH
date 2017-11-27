@@ -32,6 +32,7 @@ public class WAFQ extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,13 +51,16 @@ public class WAFQ extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        pack();
+        setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
     background b = new background();
+    question1 q = new question1();
     b.setVisible(true);
     this.setVisible(false);
+    q.helpCount = 3;
+    
     }//GEN-LAST:event_tryAgainActionPerformed
 
     /**
