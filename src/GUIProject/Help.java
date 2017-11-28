@@ -77,13 +77,14 @@ public class Help extends javax.swing.JFrame {
         });
         jPanel1.add(Skip, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 180, 90));
 
-        Hint.setFont(new java.awt.Font("Prestige Elite Std", 0, 36)); // NOI18N
+        Hint.setFont(new java.awt.Font("OCR A Extended", 0, 24)); // NOI18N
+        Hint.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HintActionPerformed(evt);
             }
         });
-        jPanel1.add(Hint, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 570, 160));
+        jPanel1.add(Hint, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 800, 160));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/8bitflyingmoney.gif"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
