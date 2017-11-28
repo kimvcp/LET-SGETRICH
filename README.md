@@ -18,7 +18,7 @@
 
 - Array and Arraylist for collecting questions and answers
 
-- Reading files to read the questionsโ€� file
+- Reading files to read the questionsเน�โ�ฌ๏ฟฝ file
 
 ## Vision or mock-up of the application
 
@@ -28,9 +28,9 @@ The interface of this application
 
 The gameplay of this application
 
-![capture jpg 1](https://user-images.githubusercontent.com/32285706/32793857-b84f7932-c999-11e7-8fd7-c94fe62fcffd.JPG)
+![interface](https://user-images.githubusercontent.com/32285706/33299924-69b35b68-d420-11e7-93b0-2e4b19bd86da.JPG)
 
-Help option 
+Help options
 
 ![capturehelp](https://user-images.githubusercontent.com/32285706/33299663-396b3a58-d41f-11e7-9049-670dc0dacbd1.JPG)
 
