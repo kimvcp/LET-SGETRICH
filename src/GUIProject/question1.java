@@ -41,7 +41,7 @@ public class question1 extends javax.swing.JFrame {
     static int callquestion;
     public static int helpCount = 3;
     static int saveQuestion = 0;
-
+    
     public void setRandom() {
         for (int i = 0; i < askRandom.length; i++) {
             askRandom[i] = true;
@@ -498,7 +498,7 @@ public class question1 extends javax.swing.JFrame {
         if (clickCount == 1) {
             if (helpCount == 3 || helpCount == 2 || helpCount == 1) {
                 helpCount--;
-                Help h = new Help();
+                Help h = new Help(this);
                 h.setVisible(true);
                 this.setVisible(false);
 

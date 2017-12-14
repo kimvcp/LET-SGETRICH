@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class has three buttons which are "back", "skip", and "hint". 
- * Choose the choices you want and back to the previous class.
- * 
+ * This class has three buttons which are "back", "skip", and "hint". Choose the
+ * choices you want and back to the previous class.
+ *
  * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 public class Help extends javax.swing.JFrame {
@@ -21,14 +21,20 @@ public class Help extends javax.swing.JFrame {
      * Creates new form HelpJFrame
      */
     private int count = 1;
-    question1 q = new question1();
+    private question1 q;
+
     public List<String> hint = new ArrayList<>();
+
+    public Help(question1 question) {
+        initComponents();
+        this.q = question;
+        q.init("src//GUIProject//QandA/Hint.TXT", hint);
+        Hint.setVisible(false);
+        this.count = 1;
+    }
 
     public Help() {
         initComponents();
-         q.init("src//GUIProject//QandA/Hint.TXT", hint);
-        Hint.setVisible(false);
-        this.count = 1;
     }
 
     /**
@@ -97,9 +103,9 @@ public class Help extends javax.swing.JFrame {
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
 /**
- * This method make the HelpJframe close and open the previous backgroundJframe.
- * Set count number as 1.
- */
+     * This method make the HelpJframe close and open the previous
+     * backgroundJframe. Set count number as 1.
+     */
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         q.setVisible(true);
         this.setVisible(false);
@@ -108,9 +114,9 @@ public class Help extends javax.swing.JFrame {
         q.setSaveQuestion();
         q.setImagePrice();
     }//GEN-LAST:event_BackActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
         if (count == 1) {
             Hint.setVisible(true);
@@ -121,9 +127,9 @@ public class Help extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_HintBActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
         if (count == 1) {
             q.setVisible(true);
@@ -154,16 +160,24 @@ public class Help extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -172,6 +186,7 @@ public class Help extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Help().setVisible(true);
+
             }
         }
         );

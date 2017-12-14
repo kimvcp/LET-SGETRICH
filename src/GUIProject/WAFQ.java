@@ -6,8 +6,8 @@
 package GUIProject;
 
 /**
- * This class is only for pressing the button to restart the game. 
- * 
+ * This class is only for pressing the button to restart the game.
+ *
  * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 public class WAFQ extends javax.swing.JFrame {
@@ -15,6 +15,9 @@ public class WAFQ extends javax.swing.JFrame {
     /**
      * Creates new form WrongAnsFirstQuestion
      */
+    background b = new background();
+    question1 q = new question1();
+
     public WAFQ() {
         initComponents();
     }
@@ -55,15 +58,14 @@ public class WAFQ extends javax.swing.JFrame {
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
 /**
- * 
- */    
+     *
+     */
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
-    background b = new background();
-    question1 q = new question1();
-    b.setVisible(true);
-    this.setVisible(false);
-    q.helpCount = 3;
-    
+
+        b.setVisible(true);
+        this.setVisible(false);
+        q.helpCount = 3;
+
     }//GEN-LAST:event_tryAgainActionPerformed
 
     /**
