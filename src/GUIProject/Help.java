@@ -10,8 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author HP
+ * This class has three buttons which are "back", "skip", and "hint". 
+ * Choose the choices you want and back to the previous class.
+ * 
+ * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 public class Help extends javax.swing.JFrame {
 
@@ -24,6 +26,7 @@ public class Help extends javax.swing.JFrame {
 
     public Help() {
         initComponents();
+         q.init("src//GUIProject//QandA/Hint.TXT", hint);
         Hint.setVisible(false);
         this.count = 1;
     }
@@ -106,8 +109,7 @@ public class Help extends javax.swing.JFrame {
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
         if (count == 1) {
             Hint.setVisible(true);
-            q.init("src//GUIProject//QandA/Hint.TXT", hint);
-            Hint.setText(hint.get(callquestion - 1));
+            Hint.setText(hint.get(callquestion));
             count = 0;
             q.clickCount = 1;
         }

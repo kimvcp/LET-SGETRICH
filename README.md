@@ -9,16 +9,16 @@
 - A game of answers and questions where players can earn money.
 
 ## Detailed description
-- This application lets anyone who plays our game challenge themselves by answering the random questions which need a lot of knowledge. You will have an option to choose to answer or not. If you choose the correct answer, you will go to the next question but if you choose the wrong answer, the game will deduct your money. Therefore, we provide two other options which are "skip" and "hint" to help your answering questions correctly. Each question will have 4 choices.
+- This application lets anyone who plays our game challenge themselves by answering the random questions which need a lot of knowledge. You will have an option to choose to answer or not. If you choose the correct answer, you will go to the next question and your money will be increased but if you choose the wrong answer, the game will deduct your money. Therefore, we provide two other options which are "skip" and "hint" to help your answering questions correctly. Each question will have 4 choices.
 
 ## The Main features and course knowledge that we are using:
-- JavaFx for graphic UI
+- JavaSwing for graphic UI
 
 - Object Oriented Programming for everything
 
 - Array and Arraylist for collecting questions and answers
 
-- Reading files to read the questionsเน�โ�ฌ๏ฟฝ file
+- Reading files to read the file of questions and answers
 
 ## Vision or mock-up of the application
 

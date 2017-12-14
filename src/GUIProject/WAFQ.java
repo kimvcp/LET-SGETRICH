@@ -6,8 +6,9 @@
 package GUIProject;
 
 /**
- *
- * @author HP
+ * This class is only for pressing the button to restart the game. 
+ * 
+ * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 public class WAFQ extends javax.swing.JFrame {
 

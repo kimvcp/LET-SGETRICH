@@ -6,8 +6,10 @@
 package GUIProject;
 
 /**
+ * This class is the beginning of the game. Press the start button to start the
+ * game or exit button to close this application.
  *
- * @author HP
+ * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 public class background extends javax.swing.JFrame {
 
@@ -17,6 +19,7 @@ public class background extends javax.swing.JFrame {
     public background() {
         initComponents();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
