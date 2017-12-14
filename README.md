@@ -34,5 +34,7 @@ Help options
 
 ![capturehelp](https://user-images.githubusercontent.com/32285706/33299663-396b3a58-d41f-11e7-9049-670dc0dacbd1.JPG)
 
+## Download link
+https://github.com/kimvcp/LET-SGETRICH/raw/master/dist.rar
 
 
