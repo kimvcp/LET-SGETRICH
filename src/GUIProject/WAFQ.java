@@ -15,9 +15,6 @@ public class WAFQ extends javax.swing.JFrame {
     /**
      * Creates new form WrongAnsFirstQuestion
      */
-    background b = new background();
-    question1 q = new question1();
-
     public WAFQ() {
         initComponents();
     }
@@ -61,7 +58,8 @@ public class WAFQ extends javax.swing.JFrame {
      *
      */
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
-
+        background b = new background();
+        question1 q = new question1();
         b.setVisible(true);
         this.setVisible(false);
         q.helpCount = 3;

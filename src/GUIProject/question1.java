@@ -12,6 +12,7 @@ package GUIProject;
  * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
 import static java.awt.Color.WHITE;
+import java.io.InputStream;
 import java.awt.Color;
 import java.awt.Component;
 import javax.swing.ImageIcon;
@@ -41,7 +42,7 @@ public class question1 extends javax.swing.JFrame {
     static int callquestion;
     public static int helpCount = 3;
     static int saveQuestion = 0;
-    
+
     public void setRandom() {
         for (int i = 0; i < askRandom.length; i++) {
             askRandom[i] = true;
@@ -63,12 +64,12 @@ public class question1 extends javax.swing.JFrame {
         ans2.setText("");
         ans3.setText("");
         ans4.setText("");
-        init("src//GUIProject//QandA/question.TXT", Questions);
-        init("src//GUIProject//QandA/ans1.TXT", Ans1);
-        init("src//GUIProject//QandA/ans2.TXT", Ans2);
-        init("src//GUIProject//QandA/ans3.TXT", Ans3);
-        init("src//GUIProject//QandA/ans4.TXT", Ans4);
-        init("src//GUIProject//QandA/Answer.TXT", Answer);
+        init("./GUIProject//QandA/question.TXT", Questions);
+        init("./GUIProject//QandA/ans1.TXT", Ans1);
+        init("./GUIProject//QandA/ans2.TXT", Ans2);
+        init("./GUIProject//QandA/ans3.TXT", Ans3);
+        init("./GUIProject//QandA/ans4.TXT", Ans4);
+        init("./GUIProject//QandA/Answer.TXT", Answer);
     }
 
     public List<String> Questions = new ArrayList<>();
@@ -79,21 +80,16 @@ public class question1 extends javax.swing.JFrame {
     public List<String> Answer = new ArrayList<>();
 
     public void init(String filename, List a) {
-        File file = new File(filename);
-        if (file == null) {
-            System.out.println("Could not access file " + file);
+        ClassLoader loader = question1.class.getClassLoader();
+        InputStream in = loader.getResourceAsStream(filename);
+        if (in == null) {
+            System.out.println("Could not access file " + filename);
             return;
         } else {
-            try {
-                Scanner reader = new Scanner(file);
-                while (reader.hasNextLine()) {
-                    a.add(reader.nextLine());
-
-                }
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(question1.class.getName()).log(Level.SEVERE, null, ex);
+            Scanner reader = new Scanner(in);
+            while (reader.hasNextLine()) {
+                a.add(reader.nextLine());
             }
-
         }
     }
 
@@ -377,9 +373,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans1ActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
         if (clickCount == 1) {
             if (Ans1.get(callquestion).equals(Answer.get(callquestion))) {
@@ -406,9 +402,9 @@ public class question1 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_ans1MouseClicked
-/**
- * 
- */
+    /**
+     *
+     */
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
         if (clickCount == 1) {
             if (Ans3.get(callquestion).equals(Answer.get(callquestion))) {
@@ -434,9 +430,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans4ActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
         if (clickCount == 1) {
             if (Ans4.get(callquestion).equals(Answer.get(callquestion))) {
@@ -462,9 +458,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans2ActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
         if (clickCount == 1) {
             if (Ans2.get(callquestion).equals(Answer.get(callquestion))) {
@@ -490,9 +486,9 @@ public class question1 extends javax.swing.JFrame {
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_QuestionActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
 
         if (clickCount == 1) {
@@ -513,9 +509,9 @@ public class question1 extends javax.swing.JFrame {
 
         saveQuestion = callquestion;
     }//GEN-LAST:event_HelpbuttonActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
 
         if (clickCount == 0) {
@@ -539,9 +535,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans3ActionPerformed
-/**
- * 
- */
+    /**
+     *
+     */
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
 
         this.setVisible(false);
