@@ -54,7 +54,9 @@ public class WAFQ extends javax.swing.JFrame {
 
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * 
+ */    
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
     background b = new background();
     question1 q = new question1();

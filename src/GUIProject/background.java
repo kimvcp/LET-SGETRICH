@@ -5,6 +5,14 @@
  */
 package GUIProject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * This class is the beginning of the game. Press the start button to start the
  * game or exit button to close this application.
@@ -88,11 +96,15 @@ public class background extends javax.swing.JFrame {
 
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * 
+ */
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
-
+/**
+ * 
+ */
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         question1 q = new question1();
         q.helpCount = 3;

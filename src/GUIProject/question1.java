@@ -377,7 +377,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans1ActionPerformed
-
+/**
+ * 
+ */
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
         if (clickCount == 1) {
             if (Ans1.get(callquestion).equals(Answer.get(callquestion))) {
@@ -404,7 +406,9 @@ public class question1 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_ans1MouseClicked
-
+/**
+ * 
+ */
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
         if (clickCount == 1) {
             if (Ans3.get(callquestion).equals(Answer.get(callquestion))) {
@@ -430,7 +434,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans4ActionPerformed
-
+/**
+ * 
+ */
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
         if (clickCount == 1) {
             if (Ans4.get(callquestion).equals(Answer.get(callquestion))) {
@@ -456,7 +462,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans2ActionPerformed
-
+/**
+ * 
+ */
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
         if (clickCount == 1) {
             if (Ans2.get(callquestion).equals(Answer.get(callquestion))) {
@@ -482,7 +490,9 @@ public class question1 extends javax.swing.JFrame {
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_QuestionActionPerformed
-
+/**
+ * 
+ */
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
 
         if (clickCount == 1) {
@@ -503,7 +513,9 @@ public class question1 extends javax.swing.JFrame {
 
         saveQuestion = callquestion;
     }//GEN-LAST:event_HelpbuttonActionPerformed
-
+/**
+ * 
+ */
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
 
         if (clickCount == 0) {
@@ -527,7 +539,9 @@ public class question1 extends javax.swing.JFrame {
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans3ActionPerformed
-
+/**
+ * 
+ */
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
 
         this.setVisible(false);
