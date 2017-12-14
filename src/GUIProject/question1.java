@@ -64,12 +64,12 @@ public class question1 extends javax.swing.JFrame {
         ans2.setText("");
         ans3.setText("");
         ans4.setText("");
-        init("./GUIProject//QandA/question.TXT", Questions);
-        init("./GUIProject//QandA/ans1.TXT", Ans1);
-        init("./GUIProject//QandA/ans2.TXT", Ans2);
-        init("./GUIProject//QandA/ans3.TXT", Ans3);
-        init("./GUIProject//QandA/ans4.TXT", Ans4);
-        init("./GUIProject//QandA/Answer.TXT", Answer);
+        init("GUIProject/QandA/question.TXT", Questions);
+        init("GUIProject/QandA/ans1.TXT", Ans1);
+        init("GUIProject/QandA/ans2.TXT", Ans2);
+        init("GUIProject/QandA/ans3.TXT", Ans3);
+        init("GUIProject/QandA/ans4.TXT", Ans4);
+        init("GUIProject/QandA/Answer.TXT", Answer);
     }
 
     public List<String> Questions = new ArrayList<>();

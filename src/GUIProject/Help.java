@@ -28,7 +28,7 @@ public class Help extends javax.swing.JFrame {
     public Help(question1 question) {
         initComponents();
         this.q = question;
-        q.init("./GUIProject//QandA/Hint.TXT", hint);
+        q.init("GUIProject//QandA/Hint.TXT", hint);
         Hint.setVisible(false);
         this.count = 1;
     }
