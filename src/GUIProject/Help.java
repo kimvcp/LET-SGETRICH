@@ -5,7 +5,7 @@
  */
 package GUIProject;
 
-import static GUIProject.question1.callquestion;
+import static GUIProject.Gameplay.callquestion;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,14 +21,14 @@ public class Help extends javax.swing.JFrame {
      * Creates new form HelpJFrame
      */
     private int count = 1;
-    private question1 q;
+    private Gameplay q;
 
     public List<String> hint = new ArrayList<>();
 
     /**
      * Initialize question.
      */
-    public Help(question1 question) {
+    public Help(Gameplay question) {
         initComponents();
         this.q = question;
         q.init("GUIProject//QandA/Hint.TXT", hint);
@@ -105,10 +105,7 @@ public class Help extends javax.swing.JFrame {
 
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
-/**
-     * This method make the HelpJframe close and open the previous
-     * backgroundJframe. Set count number as 1.
-     */
+
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
         q.setVisible(true);
         this.setVisible(false);
@@ -117,9 +114,7 @@ public class Help extends javax.swing.JFrame {
         q.setSaveQuestion();
         q.setImagePrice();
     }//GEN-LAST:event_BackActionPerformed
-    /**
-     *
-     */
+
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
         if (count == 1) {
             Hint.setVisible(true);
@@ -130,9 +125,7 @@ public class Help extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_HintBActionPerformed
-    /**
-     *
-     */
+
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
         if (count == 1) {
             q.setVisible(true);
@@ -146,7 +139,7 @@ public class Help extends javax.swing.JFrame {
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_HintActionPerformed
 
     /**

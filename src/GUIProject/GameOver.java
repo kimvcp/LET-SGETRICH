@@ -10,12 +10,12 @@ package GUIProject;
  *
  * @author Vichaphol Thamsuthikul and Chawanant Kerdchuen
  */
-public class WAFQ extends javax.swing.JFrame {
+public class GameOver extends javax.swing.JFrame {
 
     /**
      * Creates new form WrongAnsFirstQuestion
      */
-    public WAFQ() {
+    public GameOver() {
         initComponents();
     }
 
@@ -54,12 +54,10 @@ public class WAFQ extends javax.swing.JFrame {
 
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
-/**
-     *
-     */
+
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
-        background b = new background();
-        question1 q = new question1();
+        Homepage b = new Homepage();
+        Gameplay q = new Gameplay();
         b.setVisible(true);
         this.setVisible(false);
         q.helpCount = 3;
@@ -83,21 +81,23 @@ public class WAFQ extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WAFQ.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WAFQ.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WAFQ.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WAFQ.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WAFQ().setVisible(true);
+                new GameOver().setVisible(true);
             }
         });
     }

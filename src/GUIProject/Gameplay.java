@@ -27,10 +27,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTextField;
 
-public class question1 extends javax.swing.JFrame {
+public class Gameplay extends javax.swing.JFrame {
 
     /**
-     * Creates new form question1
+     * Creates new form Gameplay.
      */
     public static int clickCount = 1;
     static int questionAmount = 1;
@@ -38,13 +38,13 @@ public class question1 extends javax.swing.JFrame {
     static int winCount = 0;
     boolean[] askRandom = new boolean[21];
     Random randomNumber = new Random();
-    WAFQ w = new WAFQ();
+    GameOver w = new GameOver();
     static int callquestion;
     public static int helpCount = 3;
     static int saveQuestion = 0;
 
     /**
-     * Declare that every random are true
+     * Declare that every random questions and answers are true.
      */
     public void setRandom() {
         for (int i = 0; i < askRandom.length; i++) {
@@ -59,7 +59,7 @@ public class question1 extends javax.swing.JFrame {
         count.setText(String.format("%d", helpCount));
     }
 
-    public question1() {
+    public Gameplay() {
         initComponents();
         setRandom();
         congrat.setVisible(false);
@@ -89,7 +89,7 @@ public class question1 extends javax.swing.JFrame {
      * Use classLoader to read file.
      */
     public void init(String filename, List a) {
-        ClassLoader loader = question1.class.getClassLoader();
+        ClassLoader loader = Gameplay.class.getClassLoader();
         InputStream in = loader.getResourceAsStream(filename);
         if (in == null) {
             System.out.println("Could not access file " + filename);
@@ -187,8 +187,8 @@ public class question1 extends javax.swing.JFrame {
     }
 
     /**
-     * Set the text to another set of Question and Answer. Set the text
-     * background to white.
+     * Set the text to another set of Question and Answer. Set the text Homepage
+     * to white.
      */
     public void runNextButt() {
         clickCount = 1;
@@ -552,7 +552,7 @@ public class question1 extends javax.swing.JFrame {
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
 
         this.setVisible(false);
-        background b = new background();
+        Homepage b = new Homepage();
         b.setVisible(true);
         winCount = 0;
         questionAmount = 1;
@@ -580,20 +580,21 @@ public class question1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(question1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gameplay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(question1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gameplay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(question1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gameplay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(question1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Gameplay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new question1().setVisible(true);
+                new Gameplay().setVisible(true);
             }
         });
     }
