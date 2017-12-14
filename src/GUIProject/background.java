@@ -96,15 +96,9 @@ public class background extends javax.swing.JFrame {
 
         setBounds(530, 180, 818, 647);
     }// </editor-fold>//GEN-END:initComponents
-/**
- * 
- */
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
-/**
- * 
- */
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         question1 q = new question1();
         q.helpCount = 3;

@@ -43,12 +43,18 @@ public class question1 extends javax.swing.JFrame {
     public static int helpCount = 3;
     static int saveQuestion = 0;
 
+    /**
+     * Declare that every random are true
+     */
     public void setRandom() {
         for (int i = 0; i < askRandom.length; i++) {
             askRandom[i] = true;
         }
     }
 
+    /**
+     * Count when click helpButton.
+     */
     public void setCount() {
         count.setText(String.format("%d", helpCount));
     }
@@ -79,6 +85,9 @@ public class question1 extends javax.swing.JFrame {
     public List<String> Ans4 = new ArrayList<>();
     public List<String> Answer = new ArrayList<>();
 
+    /**
+     * Use classLoader to read file.
+     */
     public void init(String filename, List a) {
         ClassLoader loader = question1.class.getClassLoader();
         InputStream in = loader.getResourceAsStream(filename);
@@ -90,11 +99,14 @@ public class question1 extends javax.swing.JFrame {
             while (reader.hasNextLine()) {
                 a.add(reader.nextLine());
             }
+            reader.close();
         }
     }
 
     @SuppressWarnings("unchecked")
-
+    /**
+     * Return the image.
+     */
     public String returnSetImage(int what) {
         if (what == 0) {
             return "starter.png";
@@ -121,10 +133,16 @@ public class question1 extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Set the image by get the image from file.
+     */
     public void setImagePrice() {
         Price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIProject/image/" + returnSetImage(winCount))));
     }
 
+    /**
+     * Set text due to the final result.
+     */
     public void setMoney(int what) {
         if (what == 9) {
             congrat.setText("Congratuation! you won the game");
@@ -157,6 +175,9 @@ public class question1 extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Save the question that has appeared.
+     */
     public void setSaveQuestion() {
         Question.setText(Questions.get(saveQuestion));
         ans1.setText(Ans1.get(saveQuestion));
@@ -165,6 +186,10 @@ public class question1 extends javax.swing.JFrame {
         ans4.setText(Ans4.get(saveQuestion));
     }
 
+    /**
+     * Set the text to another set of Question and Answer. Set the text
+     * background to white.
+     */
     public void runNextButt() {
         clickCount = 1;
         ans1.setBackground(WHITE);
@@ -371,11 +396,9 @@ public class question1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ans1ActionPerformed
-    /**
-     *
-     */
+
     private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
         if (clickCount == 1) {
             if (Ans1.get(callquestion).equals(Answer.get(callquestion))) {
@@ -402,9 +425,7 @@ public class question1 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_ans1MouseClicked
-    /**
-     *
-     */
+
     private void ans3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans3MouseClicked
         if (clickCount == 1) {
             if (Ans3.get(callquestion).equals(Answer.get(callquestion))) {
@@ -428,11 +449,9 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans3MouseClicked
 
     private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ans4ActionPerformed
-    /**
-     *
-     */
+
     private void ans4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans4MouseClicked
         if (clickCount == 1) {
             if (Ans4.get(callquestion).equals(Answer.get(callquestion))) {
@@ -456,11 +475,9 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans4MouseClicked
 
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ans2ActionPerformed
-    /**
-     *
-     */
+
     private void ans2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans2MouseClicked
         if (clickCount == 1) {
             if (Ans2.get(callquestion).equals(Answer.get(callquestion))) {
@@ -484,11 +501,9 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_ans2MouseClicked
 
     private void QuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_QuestionActionPerformed
-    /**
-     *
-     */
+
     private void HelpbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbuttonActionPerformed
 
         if (clickCount == 1) {
@@ -509,9 +524,7 @@ public class question1 extends javax.swing.JFrame {
 
         saveQuestion = callquestion;
     }//GEN-LAST:event_HelpbuttonActionPerformed
-    /**
-     *
-     */
+
     private void NextbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextbuttonActionPerformed
 
         if (clickCount == 0) {
@@ -533,11 +546,9 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HelpbuttonMouseClicked
 
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ans3ActionPerformed
-    /**
-     *
-     */
+
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
 
         this.setVisible(false);
@@ -549,7 +560,7 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void congratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_congratActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_congratActionPerformed
 
     /**

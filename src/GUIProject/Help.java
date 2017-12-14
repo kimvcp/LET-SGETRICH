@@ -25,6 +25,9 @@ public class Help extends javax.swing.JFrame {
 
     public List<String> hint = new ArrayList<>();
 
+    /**
+     * Initialize question.
+     */
     public Help(question1 question) {
         initComponents();
         this.q = question;
