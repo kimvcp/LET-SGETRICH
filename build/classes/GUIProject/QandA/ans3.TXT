@@ -15,6 +15,6 @@ C). .class
 C). Euro
 C). Siamsport
 C). Cyprus
-C). Jame Gosling
+C). James Gosling
 C). class
 C). Ada
