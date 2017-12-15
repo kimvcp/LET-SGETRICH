@@ -91,7 +91,7 @@ public class Homepage extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        setBounds(530, 180, 818, 647);
+        setBounds(530, 180, 799, 622);
     }// </editor-fold>//GEN-END:initComponents
     private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
         System.exit(0);

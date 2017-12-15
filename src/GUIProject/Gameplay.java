@@ -392,7 +392,7 @@ public class Gameplay extends javax.swing.JFrame {
 
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
-        setBounds(530, 180, 818, 647);
+        setBounds(530, 180, 800, 621);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans1ActionPerformed
