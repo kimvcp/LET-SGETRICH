@@ -89,6 +89,7 @@ public class Help extends javax.swing.JFrame {
         });
         jPanel1.add(Skip, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 180, 90));
 
+        Hint.setEditable(false);
         Hint.setFont(new java.awt.Font("OCR A Extended", 0, 24)); // NOI18N
         Hint.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Hint.addActionListener(new java.awt.event.ActionListener() {
