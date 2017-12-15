@@ -56,11 +56,11 @@ public class GameOver extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tryAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainActionPerformed
-        Homepage b = new Homepage();
-        Gameplay q = new Gameplay();
-        b.setVisible(true);
+        Homepage start = new Homepage();
+        Gameplay play = new Gameplay();
+        start.setVisible(true);
         this.setVisible(false);
-        q.helpCount = 3;
+        play.helpCount = 3;
 
     }//GEN-LAST:event_tryAgainActionPerformed
 

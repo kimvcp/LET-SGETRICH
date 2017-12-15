@@ -38,7 +38,7 @@ public class Gameplay extends javax.swing.JFrame {
     static int winCount = 0;
     boolean[] askRandom = new boolean[21];
     Random randomNumber = new Random();
-    GameOver w = new GameOver();
+    GameOver over = new GameOver();
     static int callquestion;
     public static int helpCount = 3;
     static int saveQuestion = 0;
@@ -410,7 +410,7 @@ public class Gameplay extends javax.swing.JFrame {
                 ans1.setOpaque(true);
                 ans1.setBackground(Color.red);
                 if (winCount <= 0) {
-                    w.setVisible(true);
+                    over.setVisible(true);
                     this.setVisible(false);
                     clickCount = 1;
                 } else {
@@ -436,7 +436,7 @@ public class Gameplay extends javax.swing.JFrame {
                 ans3.setOpaque(true);
                 ans3.setBackground(Color.red);
                 if (winCount <= 0) {
-                    w.setVisible(true);
+                    over.setVisible(true);
                     this.setVisible(false);
                     clickCount = 1;
                 } else {
@@ -462,7 +462,7 @@ public class Gameplay extends javax.swing.JFrame {
                 ans4.setOpaque(true);
                 ans4.setBackground(Color.red);
                 if (winCount <= 0) {
-                    w.setVisible(true);
+                    over.setVisible(true);
                     this.setVisible(false);
                     clickCount = 1;
                 } else {
@@ -488,7 +488,7 @@ public class Gameplay extends javax.swing.JFrame {
                 ans2.setOpaque(true);
                 ans2.setBackground(Color.red);
                 if (winCount <= 0) {
-                    w.setVisible(true);
+                    over.setVisible(true);
                     this.setVisible(false);
                     clickCount = 1;
                 } else {
@@ -552,8 +552,8 @@ public class Gameplay extends javax.swing.JFrame {
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
 
         this.setVisible(false);
-        Homepage b = new Homepage();
-        b.setVisible(true);
+        Homepage start = new Homepage();
+        start.setVisible(true);
         winCount = 0;
         questionAmount = 1;
         helpCount = 3;

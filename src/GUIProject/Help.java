@@ -21,7 +21,7 @@ public class Help extends javax.swing.JFrame {
      * Creates new form HelpJFrame
      */
     private int count = 1;
-    private Gameplay q;
+    private Gameplay play;
 
     public List<String> hint = new ArrayList<>();
 
@@ -30,8 +30,8 @@ public class Help extends javax.swing.JFrame {
      */
     public Help(Gameplay question) {
         initComponents();
-        this.q = question;
-        q.init("GUIProject//QandA/Hint.TXT", hint);
+        this.play = question;
+        play.init("GUIProject//QandA/Hint.TXT", hint);
         Hint.setVisible(false);
         this.count = 1;
     }
@@ -107,12 +107,12 @@ public class Help extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        q.setVisible(true);
+        play.setVisible(true);
         this.setVisible(false);
-        q.clickCount = 1;
-        q.setCount();
-        q.setSaveQuestion();
-        q.setImagePrice();
+        play.clickCount = 1;
+        play.setCount();
+        play.setSaveQuestion();
+        play.setImagePrice();
     }//GEN-LAST:event_BackActionPerformed
 
     private void HintBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintBActionPerformed
@@ -120,7 +120,7 @@ public class Help extends javax.swing.JFrame {
             Hint.setVisible(true);
             Hint.setText(hint.get(callquestion));
             count = 0;
-            q.clickCount = 1;
+            play.clickCount = 1;
         }
 
 
@@ -128,14 +128,14 @@ public class Help extends javax.swing.JFrame {
 
     private void SkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkipActionPerformed
         if (count == 1) {
-            q.setVisible(true);
+            play.setVisible(true);
             this.setVisible(false);
-            q.runNextButt();
-            q.setImagePrice();
+            play.runNextButt();
+            play.setImagePrice();
             count = 0;
         }
-        q.clickCount = 1;
-        q.setCount();
+        play.clickCount = 1;
+        play.setCount();
     }//GEN-LAST:event_SkipActionPerformed
 
     private void HintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HintActionPerformed

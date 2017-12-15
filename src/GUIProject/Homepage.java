@@ -97,14 +97,14 @@ public class Homepage extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ExitActionPerformed
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        Gameplay q = new Gameplay();
-        q.helpCount = 3;
-        q.clickCount = 0;
-        q.questionCount = 0;
-        q.questionAmount = 1;
-        q.winCount = 0;
+        Gameplay play = new Gameplay();
+        play.helpCount = 3;
+        play.clickCount = 0;
+        play.questionCount = 0;
+        play.questionAmount = 1;
+        play.winCount = 0;
         this.setVisible(false);
-        q.setVisible(true);
+        play.setVisible(true);
     }//GEN-LAST:event_StartActionPerformed
 
     /**
