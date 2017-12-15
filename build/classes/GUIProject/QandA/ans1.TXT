@@ -4,7 +4,7 @@ A). Spain
 A). Argentina
 A). La La Land
 A). La La Land
-A). Copy 
+A). Copy constructor
 A). Chiang-Rai
 A). Sarajevo
 A). length
