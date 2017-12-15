@@ -107,7 +107,7 @@ public class Help extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        play.setVisible(true);
+        play .setVisible(true);
         this.setVisible(false);
         play.clickCount = 1;
         play.setCount();
