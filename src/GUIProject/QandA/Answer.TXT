@@ -15,6 +15,6 @@ A). .java
 B). Dong
 D). TrueMove H
 B). Brunei
-C). Jame Gosling
+C). James Gosling
 B). virtual
 A). Oak
